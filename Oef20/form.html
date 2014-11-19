@@ -29,36 +29,47 @@
   </header>
 	<!-- Content -->
 	<div id="top"><h1>Fanclub</h1></div>
-	<div class="content2">
+	<div class="content2"> <div class="content-wrapper">
 		<form action="mailto:zoomsxl@gmail.com">
+			<h2> Lid worden van de Fanclub</h2>
 			<fieldset>
-			<legend><h1>Lid worden van de Fanclub</h1></legend>
+			<legend>Gegevens</legend>
 		<p>
 			<label for="voornaam">Voornaam :</label>
-			<input type="text" id="voornaam" name="voornaam" placeholder="Vul hier je voornaam in" required>	
+			<input type="text" class="long" id="voornaam" name="voornaam" placeholder="Vul hier je voornaam in" required>	
 		</p>
 		<p>
 			<label for="achternaam">Achternaam :</label>	
-			<input type="text" id="achternaam" name="achternaam" placeholder="Vul hier je achternaam in" required>
+			<input type="text" class="long" id="achternaam" name="achternaam" placeholder="Vul hier je achternaam in" required>
 		</p>
 		<p>
 			<label for="email">E-mailadres :</label>
-			<input type="text" id="email" name="email" placeholder="Vul hier je e-mail in" required>
+			<input type="text" class="long" id="email" name="email" placeholder="Vul hier je e-mail in" required>
 		</p>
 		<p>
 			<label for="uit">Uitleg over jezelf :</label>
-			<textarea id="uit" name="uit" placeholder="Leg jezelf uit!" rows="8" cols="20" required></textarea>
+			<textarea id="uit" class="long" name="uit" placeholder="Leg jezelf uit!" rows="8" cols="20" required></textarea>
 		</p>
+		</fieldset>
+		<fieldset>
+			<legend>Nieuwsbrief</legend>
+			<p>
+				<label class="checkbox">
+					<input type="checkbox" name="nieuwsbrief">
+					Ik wens de nieuwsbrief te ontvangen.
+				</label>
+			</p>
+		</fieldset>
 		<p class="cent">
-			<input type="submit" value="Verzenden"> &nbsp; &nbsp;
-			<input type="reset" value="Reseten">
+			<input class="button button-primary" type="submit" value="Verzenden"> &nbsp; &nbsp;
+			<input class="button" type="reset" value="Reseten">
 		</p>
-	</fieldset>	
+		
 		</form>
-	</div>
+	</div> </div> 
 
 	<!-- Footer -->
-		<footer class="norm"><div class="color">&copy; Yarne Decuyper</div></footer>
+		<footer class="alb"><div class="color">&copy; Yarne Decuyper</div></footer>
 
 </body>
 	

@@ -96,11 +96,15 @@ hr{
 }
 #top h1, #top1 h1, #top2 h1 {
 	font-size: 40px;
-	font-family: 'Roboto Condensed', sans-serif; 
+	font-family: 'Roboto Condensed', sans-serif;
+	text-shadow: 0 0 8px #FFF;
 }
 div.col4 a, .songs a{
 	text-decoration: none;
 	color: black;
+}
+.songs a {
+	text-decoration: underline;
 }
 div.col4 a:hover, .songs a:hover {
 	color: white;
@@ -110,7 +114,7 @@ div.col4 a:hover, .songs a:hover {
 	margin: 5px;
 	font-size: 14px;
 }
-.col-wrapper h2  {
+.col-wrapper h2, .content2 h2  {
 	font-size: 30px;
 	border-bottom: 10px solid black;
 	padding-bottom: 10px;
@@ -126,6 +130,9 @@ div.col4 a:hover, .songs a:hover {
 	margin-top: 10px;
 	margin-left: 10px;
 	width: 650px;
+}
+#frame1{
+	float: right;
 }
 #imgmap {
 	width: 1080px;
@@ -153,22 +160,49 @@ ul.album-list li{
 	padding: 1em;
 }
 .content {
-	width: 808px;
+	width: 850px;
 	background-color: rgba(255,255,255,0.7);
 	margin: 0 auto;
 }
 .content2 {
-	width: 808px;
+	width: 850px;
+	background-color: rgba(255,255,255,0.7);
 	margin: 0 auto;
+	padding: 10px 10px 50px 10px;
 }
-fieldset{
+fieldset {
 	width: 700px;
 	margin: 0 auto;
 	color: #222;
-	background-color: rgba(255,255,255,0.7) ;
 	border: 1px solid black;	
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 10px;
 }
-label{
+legend {
+	margin-left: 20px;
+	font-size: 18px;
+	padding: 0 10px;
+	font-family: 'Roboto Condensed' , sans-serif;
+}
+input.long, textarea.long {
+	width: 300px;
+}
+.button {
+	background-color: transparent;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px 10px;
+	font-weight: bold;
+}
+.button-primary {
+	background-color: #999;
+}
+.button:hover {
+	background-color: black;
+	color: white;
+}
+label {
 	position: relative;
 	clear: both;
 	float: left;
@@ -178,6 +212,9 @@ label{
 	line-height: 1.3em;
 	color: #333;
 	font-weight: bold;
+}
+label.checkbox {
+	width: auto;
 }
 .cent{
 	text-align: center;
