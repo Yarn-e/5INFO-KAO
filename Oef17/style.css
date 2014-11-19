@@ -1,0 +1,110 @@
+/* body design */
+
+body {
+  font-family: helvetica, arial, verdana, sans-serif;
+  font-size: 66%;
+  color: #1E1903;
+  background: #fff url(styles/paginabg.gif) repeat-y center center;
+  margin: 0;
+  padding: 0;
+}
+#content {
+  position: relative;
+  width: 761px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent url(styles/contentbg.gif) repeat-y top  left;
+}
+#footer {
+  position: relative;
+  width: 761px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: -20px;
+  line-height: 80px;
+  color: #493F0B;
+  height: 100px;
+  text-align: center;
+  background: transparent url(styles/footerbg.gif) repeat-y top left;
+}
+#content form {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+h1 {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 134px;
+  line-height: 134px;
+  text-indent: 30px;
+  background: transparent url(styles/headbg.gif) no-repeat bottom left;
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+/*form design */
+
+fieldset {
+  margin: 10px 0 0;
+  padding: 0;
+}
+legend {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  padding: 5px;
+  margin-left: 1em;
+  color: #fff;
+  background: #493F0B;
+}
+fieldset ol {
+  padding: 10px 10px 0 10px;
+  list-style: none;
+}
+fieldset li {
+  position: relative;
+  padding-bottom: 1em;
+}
+fieldset#bevestiging {
+  background-image: none;
+  border-style: none;
+}
+label {
+  position: relative;
+  clear: left;
+  float: left;
+  width: 15em;
+  margin-right: 5px;
+  padding-right: 30px;
+  line-height: 3.4em;
+  text-align: right;
+}
+label.verplicht {
+  background: transparent url(styles/verplicht.gif) no-repeat center right;
+}
+label span {
+  position: absolute;
+  left: -10000px;
+  top: 0px;
+}
+
+p span.verplicht {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 3.4em;
+  width: 25px;
+  text-indent: -10000px;
+  overflow: hidden;
+  background: transparent url(styles/verplicht.gif) no-repeat center right;
+}
+input {
+  padding: 5px;
+  font-size: 1.4em;
+  border: 1px solid #493F0B;
+  color: #1E1903;
+  background: #F5F6D4;
+}
+input.radio {
+  border: none;
+  background: transparent;
+}

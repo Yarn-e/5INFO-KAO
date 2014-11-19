@@ -1,0 +1,29 @@
+body{
+		 background-color:lightblue;
+		 font-familly:maroon;
+		 }
+h1{
+	 color:red;
+	 }
+h2{
+	 color:blue;
+	 }
+h3{
+	 color:purple;
+	 }
+a:link, a:visited, a:hover, a:active
+				{
+				color:blue;
+				text-decoration:none;
+				}
+#Img{
+		 float:right;
+		 }	 
+	 
+
+			 
+
+
+
+
+

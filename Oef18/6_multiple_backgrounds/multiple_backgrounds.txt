@@ -1,0 +1,18 @@
+/* CSS */
+div#multi-background-container {
+	margin: 0 auto;
+	width: 80%;
+	height: 600px;
+	
+	background: url(img/space-merged.png) repeat-x; /* FALLBACK DECLARATION */
+	
+	background:
+		url(img/space-4.png) repeat-x 30% 0,
+		url(img/space-3.png) repeat-x 0 10%,
+		url(img/space-2.png) repeat-x -30% 0,
+		url(img/space-1.png) repeat-x -100% 0;
+	background-color: #033643;
+}
+
+<!-- Markup -->
+<div id="multi-background-container"></div>

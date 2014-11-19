@@ -1,0 +1,26 @@
+/* CSS */
+div.opacity-100 {
+	opacity: 1;
+}
+
+div.opacity-75 {
+	opacity: 0.75;
+}
+
+div.opacity-50 {
+	opacity: .50;
+}
+
+div.opacity-25 {
+	opacity: 0.25;
+}
+
+<!-- Markup -->
+<div class="opacity-100">
+</div>
+<div class="opacity-75">
+</div>
+<div class="opacity-50">
+</div>
+<div class="opacity-25">
+</div>

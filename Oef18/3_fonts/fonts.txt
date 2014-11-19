@@ -1,0 +1,10 @@
+<!-- Embed With Google Web Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+
+/* CSS */
+h1.bangers {
+	font: normal 36px/36px 'Bangers', arial, serif;
+}
+
+<!-- Markup -->
+<h1 class="bangers">This is an embeded font!</h1>

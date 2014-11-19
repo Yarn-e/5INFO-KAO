@@ -1,0 +1,125 @@
+body, #frame{
+	overflow-y: scroll;
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	background-color: #F1F1F1; 
+}
+#frame,{
+	display: block;
+	width: 960px;
+	margin: 0 auto;
+}
+#frame2{
+	margin-top: 70px;
+}
+iframe{
+	background-color: transparent;
+	overflow: hidden;
+	border: 0px;
+	height: 650px;
+	width: 100%;
+}
+#log{
+	margin: 0 auto;
+	display: block;
+	width: 567px;
+}
+#leftnav{
+	float: left;
+	border:3px solid #DDD;
+	width: 260px;
+	background-color: #FFF;
+	padding: 5px;
+	position: fixed;
+}
+#leftnav .activ a{
+	color: black;
+	font-weight: bold;
+}
+#leftnav li{
+	color: black;
+	font-weight: bold;
+}
+#nav{
+	background-color: #222;
+	width: 100%;
+	top: 0;
+	font-size: 12px;
+}
+#nav-wrapper{
+	width: 960px;;
+	margin: 0 auto;
+	text-align: center;
+}
+#nav ul, #leftnav ul{ 
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+#nav ul li{
+	display: inline-block;
+}
+#nav ul li:hover{
+	background-color: #333;
+}
+#nav ul li a,visited ,#leftnav ul li a,visited {
+	color: #CCC;
+	display: block;
+	padding: 10px;;
+	text-decoration: none;
+}
+
+#wrapper{ 
+	width: 960px;
+	margin: 0 auto;
+	text-align: left;
+	box-shadow: 10px 10px 5px #CCC;
+}
+#content{ 
+	background-color: #FFF;
+	border: 3px solid #DDD;
+	padding: 20px;
+	margin: 20px 0 0 0;
+}
+#Box1{
+	float: right;
+	margin: 0 80px 0 0;
+}
+fieldset{
+	width: 960px;
+	margin: 0 auto;
+	color: #222;
+	background-color: #FFF;
+}
+label{
+	position: relative;
+	clear: both;
+	float: left;
+	width: 300px;
+	margin-right: 5px;
+	text-align: right;
+	line-height: 1.3em;
+}
+.cent{
+	text-align: center;
+}
+p{
+	color: grey;
+}
+ul, ol{
+	color: grey;
+}
+a, visted{
+	color: #333;
+	display: block;
+	text-decoration: none;
+}
+a:hover{
+	color: black;
+	font-weight: bold;
+}
+#right{
+	float: right;
+}

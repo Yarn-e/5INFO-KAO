@@ -1,0 +1,48 @@
+.container{
+	width: 960px;
+	margin: 20px auto;
+	font-family: sans-serif;
+}
+
+iframe[seamless]{
+	background-color: transparent;
+	padding: 0px;
+	overflow: hidden;
+}
+img{
+	float: left
+}
+h1{
+	color: red;
+	font-size: 65px;
+}
+p{
+	color: green;
+	font-size: 14p;
+}
+.menu{
+	height: 10px;
+	width: 860px;
+}
+a:link, a:visited{
+	color: green;
+	font-weight: bold;
+	text-decoration: none
+}
+a:hover, a:active{
+	color: red;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: yellow;
+}
+.center{
+	margin: 0 auto;
+	width: 524px;
+	
+}
+#frame{
+	background-color: lightblue;
+}
+.cent{
+	text-align: center;
+}

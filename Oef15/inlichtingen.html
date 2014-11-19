@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	
+<head>
+	<meta charset="UTF-8">
+	<title>inlichtingen</title>
+	<meta name="author" content="Decuyper Yarne">
+	<link type="text/css" rel="stylesheet" href="style.css">
+</head>
+	
+<body>
+	<form action="mailto:info@cycloon.be">
+		<p>
+			<label for="vnaam">Voornaam:</label>
+			<input type="text" name="vnaam" id="vnaam" required>
+		</p>
+		<p>
+			<label for="naam">Naam:</label>
+			<input type="text" name="naam" id="naam" required>
+		</p>
+		<p>
+			<label for="straatnr">Straat en nr:</label>
+			<input type="text" name="straatnr" id="straatnr" required>
+		</p>
+		<p>
+			<label for="postcode">Postcode:</label>
+			<input type="text" name="postcode" id="postcode" size="4" required>
+		</p>
+		<p>
+			<label for="woonplaats">Woonplaats:</label>
+			<input type="text" name="woonplaats" id="woonplaats" required>
+		</p>
+		<p>
+			<label for="telefoonnr">Telefoonnummer</label>
+			<input type="text" name="telefoonnr" id="telefoonnr" size="8" required>
+		</p>
+		<p>
+			<label for="e-mail">Emailadress</label>
+			<input type="text" name="e-mail" id="e-mail"  required>
+		</p>
+		<p>
+			<label for="vraag">Vraag:</label>
+			<textarea id="vraag" name="vraag" rows="5" cols="20" required></textarea>
+		</p>
+			<p class="centr">
+				<input type="submit" value="Verzenden"> &nbsp; &nbsp;
+				<input type="reset" value="Reseten">
+			</p>
+	</form>
+
+
+</body>
+	
+</html>

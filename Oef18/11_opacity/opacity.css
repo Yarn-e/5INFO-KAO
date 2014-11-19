@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+#main-wrap .grid_12 div {
+	width: 200px;
+	height: 200px;
+	float: left;
+	background-color: #fff;
+}
+
+div.opacity-100 {
+	opacity: 1;
+}
+
+div.opacity-75 {
+	opacity: 0.75;
+}
+
+div.opacity-50 {
+	opacity: .50;
+}
+
+div.opacity-25 {
+	opacity: 0.25;
+}

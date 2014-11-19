@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<title>Index</title>
+	<meta name="author" content="Yarne Decuyper">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+	<link href="favicon.ico" rel="icon" type="image/x-icon">
+</head>
+<body id="frame2">
+<form action="mailto:zoomsxl@gmail.com?subject:recepten">
+	<fieldset>
+	<legend><h1>Een nieuw recept!</h1></legend>
+		<h3 class="cent">
+			Ken je ook een lekker gerecht?<br>
+			Wil je het recept daarvan op deze site laten verschijnen?<br>
+			Vul dan dit formulier in.
+		</h3>
+		<p>
+			<label for="titel">Titel</label>
+			<input type="text" id="titel" name="titel" placeholder="Titel van het recept" required>	
+		</p>
+		<p>
+			<label for="voornaam">Voornaam :</label>
+			<input type="text" id="voornaam" name="voornaam" placeholder="Vul hier je voornaam in" required>	
+		</p>
+		<p>
+			<label for="achternaam">Achternaam :</label>	
+			<input type="text" id="achternaam" name="achternaam" placeholder="Vul hier je achternaam in" required>
+		</p>
+		<p>
+			<label for="email">E-mailadres :</label>
+			<input type="text" id="email" name="email" placeholder="Vul hier je e-mail in" required>
+		</p>
+		<p>
+			<label for="soort">Soort</label>
+				<select name="soort" id="soort">
+					<option>Kies je soort</option>
+					<option value="Soep">Soep</option>
+					<option value="Salade">Salade</option>
+					<option value="Voorgerecht">Voorgerecht</option>
+					<option value="Hoofdgerecht">Hoofdgerecht</option>
+					<option value="Nagerecht">Nagerecht</option>
+				</select>
+			</p>
+		<p>
+			<label for="ing">Ingredi&euml;nten</label>
+			<input type="text" id="ing" name="ing" placeholder="Vul Hier uw Ingredi&euml;nten in" required>
+		</p>
+		<p>
+			<label for="ber">Bereiding:</label>
+			<textarea id="ber" name="ber" placeholder="Vul hier uw bereiding in" rows="8" cols="21" required></textarea>
+		</p>
+		<p class="cent">
+			<input type="submit" value="Verzenden"> &nbsp; &nbsp;
+			<input type="reset" value="Reseten">
+		</p>
+	</fieldset>	
+</form>
+
+
+</body>
+</html>

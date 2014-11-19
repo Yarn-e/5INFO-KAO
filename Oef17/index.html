@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prachtige formulieren met CSS</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Decuyper Yarne">
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+	<body>
+		<div id="content">
+			<h1>Maak je formulieren mooier met CSS</h1>
+      <form>
+				<p><strong>Opmerking:</strong> Velden met een <span class="verplicht">*</span> zijn verplicht</p>
+				<fieldset id="personal">
+					<legend><span>Persoonlijke Gegevens</span></legend>
+					<ol>
+            <li>
+              <label for="voornaam" title="Vul je voornaam in" class="verplicht">Voornaam<span>*</span></label>
+              <input type="text" id="voornaam" name="voornaam" placeholder="Vul hier je voornaam in">	
+            </li>
+            <li>
+              <label for="achternaam" title="Vul je achternaam in" class="verplicht">Achternaam<span>*</span></label>	
+              <input type="text" id="achternaam" name="achternaam" placeholder="Vul hier je achternaam in">
+            </li>
+            <li>
+              <label for="email" title="Vul je e-mailadres in" class="verplicht">E-mailadres<span>*</span></label>
+              <input type="text" id="email" name="email" placeholder="Vul hier je e-mail in">
+            </li>
+            <li>
+              <label for="beroep" title="Je beroep" class="verplicht">Beroep<span>*</span></label>
+              <input class="radio" type="radio" id="beroep" name="beroep" value="Vormgever"> Vormgever
+              <input class="radio" type="radio" id="beroep" name="beroep" value="Ontwikkelaar"> Ontwikkelaar
+              <input class="radio" type="radio" id="beroep" name="beroep" value="Manager"> Manager
+						</li>
+					</ol>
+				</fieldset>
+				<fieldset id="adres">
+					<legend><span>Adresgegevens</span></legend>
+					<ol>
+						<li>
+							<label for="straat" title="Vul je straatnaam in" class="verplicht">Straat<span>*</span></label>
+							<input type="text" id="straat" name="straat">
+						</li>
+						<li>
+							<label for="huisnummer" title="Vul je huisnummer in" class="verplicht">Huisnummer</label>
+							<input type="text" id="huisnummer" name="huisnummer">
+							
+						</li>
+						<li>
+							<label for="postcode" title="Vul je postcode in" class="verplicht">Postcode<span>*</span></label>
+							<input type="text" id="postcode" name="postcode">
+						</li>
+						<li>
+							<label for="plaats" title="Vul je plaatsnaam in" class="verplicht">Plaats<span>*</span></label>
+							<input type="text" id="plaats" name="plaats">
+						</li>
+						<li>
+							<label for="phone" title="Vul je telefoonnummer in">Telefoon</label>
+							<input type="text" id="telefoon" name="telefoon">
+						</li>
+					</ol>
+				</fieldset>
+				<fieldset id="gebruikersgegevens">
+					<legend><span>Accountgegevens</span></legend>
+					<ol>
+						<li>
+							<label for="gebruikersnaam" title="Kies een gebruikersnaam" class="verplicht">Gebruikersnaam<span>*</span></label>
+							<input type="text" id="gebruikersnaam" name="gebruikersnaam">
+						</li>
+						<li>
+							<label for="wachtwoord" title="Kies een wachtwoord" class="verplicht">Wachtwoord<span>*</span></label>
+							<input type="password" id="wachtwoord" name="wachtwoord">
+						</li>
+						<li>
+							<label for="verwachtwoord" title="Vul nogmaals je wachtwoord in" class="verplicht">Wachtwoordverificatie<span>*</span></label>
+							<input type="password" id="verwachtwoord" name="verwachtwoord">
+						</li>
+					</ol>
+				</fieldset>
+				<fieldset id="bevestiging">
+					<label><input type="submit" id="form_bevestiging" value="Account aanmaken"></label>
+				</fieldset>
+			</form>
+			<p>&nbsp;</p>
+		</div>
+		<div id="footer">
+			Maak je formulieren mooier met CSS...
+		</div>
+</body>
+</html>

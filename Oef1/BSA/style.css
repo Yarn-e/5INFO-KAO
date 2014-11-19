@@ -1,0 +1,35 @@
+
+body{
+		 color:#FF0;
+    }
+h1	{
+		color:red;
+		text-align:center;
+		}
+h2	{
+	color:black;
+	
+		}
+a:link, a:visited{
+				color: lightblue;
+				text-decoration:none;
+									}
+									
+a:hover, a:active{
+				 color:yellow;
+				 text-decoration:underline;
+				 font-weight:bold;
+				 					}
+									
+img{
+		float:left;
+		border:0;
+		}
+		
+#shittyasscontainer{
+										width:960px;
+										margin: 25px auto;
+										border: 1px dashed black ;
+										background-color:#073;
+										padding: 10px;
+										}

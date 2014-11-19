@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+	
+<head>
+	<meta charset="UTF-8">
+	<title>Samenstelling pc</title>
+	<meta name="author" content="Decuyper Yarne">
+	<style>
+		.container{
+			width: 760px;
+			border: 1px solid darkblue;
+			font-family: sans-serif;
+			margin: 0 auto;
+			padding: 5px
+		}
+		table,td,tr{
+			border: 1px solid black;
+		}
+		.cent{
+			text-align: center;
+		}
+		.rechts{
+			position: relative;
+			clear: both;
+			float: left;
+			width: 150px;
+			margin-right: 5px;
+			text-align: right;
+			line-height: 1.3em;
+		}
+		caption {
+			font-size: 30px;
+			font-weight: bold;
+			padding: .5em;
+		}
+	</style>
+</head>
+	
+<body>
+	<div class="container">
+		<form action="mailto:mds@edukao.com?PC">
+			<table>
+				<caption>Samenstelling PC</caption>
+
+					<tr>
+						<td colspan="2"><h2><img src="img/processor_on.gif" alt="Processor">Proccessor</h2></td>
+						<td>meerprijs</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="processor" id="processor1" value="STD" required></td>
+						<td><label for="processor1">Intel&reg; Core&trade; 2 Duo E6400 Processor (2,13 GHz, 1.066 MHz, 2 MB)</label></td>
+						<td class="cent">STD</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="processor" id="processor2" value="€ 97"></td>
+						<td><label for="processor2">Intel&reg; Core&trade; 2 Duo E6600 Processor (2,4 GHz, 1.066 MHz, 4 MB)</label></td>
+						<td class="cent">&euro; 97</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="processor" id="processor3" value="€ 351"></td>
+						<td><label for="processor3">Intel&reg; Core&trade; 2 Duo E6700 Processor (2,66 GHz, 1.066 MHz, 4 MB)</label></td>
+						<td class="cent">&euro; 351</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="processor" id="processor4" value="€ 944"></td>
+						<td><label for="processor4">Intel&reg; Core&trade; 2 Quad Core QX6700 Extreme Processor (2,66 GHz, 1.066 MHz, 8 MB)</label></td>
+						<td class="cent">&euro; 944</td>
+					</tr>
+
+					<tr>
+						<td colspan="2"><h2><img src="img/OS_on.gif" alt="OS">Besturingssysteem</h2></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="OS" id="OS1" value="STD" required></td>
+						<td><label for="OS1">Legitieme Windows&reg; XP Media Center Edition 2005 (incl Operating System Re-Installation CD)</label></td>
+						<td class="cent">STD</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="OS" id="OS2" value="€ 42"></td>
+						<td><label for="OS2">Legitieme Windows&reg; XP Professional, SP2 (incl Operating System Re-Installation CD)</label></td>
+						<td class="cent">&euro; 42</td>
+					</tr>
+
+					<tr>
+						<td colspan="2"><h2><img src="img/memory_on.gif" alt="RAM">Geheugen</h2></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="RAM" id="RAM1" value="STD" required></td>
+						<td><label for="RAM1">2.048 MB [2 x 1.024] 667 MHz Dual Channel DDR2-geheugen</label></td>
+						<td class="cent">STD</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="RAM" id="RAM2" value="€ 425"></td>
+						<td><label for="RAM2">4.096 MG [2 x 2.048] 677 MHz Dual Channel DDR2-geheugen</label></td>
+						<td class="cent">&euro; 425</td>
+					</tr>
+
+					<tr>
+						<td colspan="2"><h2><img src="img/hard_drive_on.gif" alt="HDD">Harde Schijf</h2></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="HDD" id="HDD1" value="STD" required></td>
+						<td><label for="HDD1">320GB (7200rpm) Serial ATA/100 Hard Drive with 16MB DataBurst&trade; cache</label></td>
+						<td class="cent">STD</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="HDD" id="HDD2" value="€ 0"></td>
+						<td><label for="HDD2">320GB Serial ATA RAID 0 Stripe [2x160GB 7200rpm drives with DataBurst&trade; cache]</label></td>
+						<td class="cent">&euro; 0</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="HDD" id="HDD3" value="€ 97"></td>
+						<td><label for="HDD3">500GB Serial ATA RAID 0 Stripe [2x250GB 7200rpm drives with DataBurst&trade; cache]</label></td>
+						<td class="cent">&euro; 97</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="HDD" id="HDD4" value="€ 242"></td>
+						<td><label for="HDD4">640GB Serial ATA RAID 0 Stripe [2x320GB 7200rpm drives with DataBurst&trade; cache]</label></td>
+						<td class="cent">&euro; 242</td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="HDD" id="HDD5" value="€ 508"></td>
+						<td><label for="HDD5">1TB Serial ATA RAID 0 Stripe (2x500GB 7200rpm drives with DataBurst&trade; cache) (Non RAID)</label></td>
+						<td class="cent">&euro; 508</td>
+					</tr>
+
+					<tr>
+						<td colspan="2"><h2><img src="img/opties.gif" alt="Opties">Opties</h2></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="options" id="options1" value="€ 25" required></td>
+						<td><label for="options1">Service pack (3 jaar full garantie)</label></td>
+						<td class="cent">&euro; 25</td>
+					</tr>
+
+					<tr>
+						<td><input type="checkbox" name="options" id="options2" value="€ 75" ></td>
+						<td><label for="options2">thuis leveren</label></td>
+						<td class="cent">&euro; 75</td>
+					</tr>
+			</table>
+			<br>
+		<fieldset>
+			<legend>Persoonlijke gegevens</legend>
+			<label class="rechts" for="naam">Naam:</label>
+				<input type="text" name="naam" id="naam" required placeholder="Hier uw naam"><br>
+			<label class="rechts" for="voornaam">Voornaam:</label>
+				<input type="text" name="voornaam" id="voornaam" required placeholder="Hier uw voornaam"><br>	
+			<label class="rechts" for="straat/nummer">Straat &amp; nummer:</label>
+				<input type="text" name="straat/nummer" id="straat/nummer" required placeholder="Hier uw straat + nummer"><br>
+			<label class="rechts" for="postcode">Postcode:</label>
+				<input type="text" name="postcode" id="postcode" required placeholder="Hier uw postcode"><br>	
+			<label class="rechts" for="gemeente">Gemeente:</label>
+				<input type="text" name="gemeente" id="gemeente" required placeholder="Hier uw gemeente"><br>	
+			<label class="rechts" for="telefoon">Telefoonnr:</label>
+				<input type="text" name="telefoon" id="telefoon" required placeholder="Hier uw Telefoonnr"><br>	
+		</fieldset>
+			<p class="cent">
+				<input type="submit" value="Verzenden"> &nbsp; &nbsp;
+				<input type="reset" value="Reseten">
+			</p>
+		</form>	
+	</div>
+</body>
+	
+</html>

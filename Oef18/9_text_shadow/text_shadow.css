@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.text-fanciness {
+	font-family: 'ChunkFiveRegular';
+	color: #181818;
+	font-size:80px;
+	text-shadow: rgba(0, 0, 0, 1.0) -1px -1px 0,
+				 rgba(255, 255, 255, 0.1) 1px 1px 0; 
+}

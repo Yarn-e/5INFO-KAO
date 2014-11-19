@@ -1,0 +1,109 @@
+.body1{
+	background-image: url(../img/meerkat.jpg);
+	color: #666;
+}
+.container{
+	width: 960px;
+	margin: 50px auto;
+	border: 1px solid red;
+	text-align: center;
+	background: rgba(0,0,0,0.7)
+}
+.menu1{
+	width: 50%;
+	font-size: 50px;
+	border-bottom: 1px solid grey; 
+	border-top: 1px solid grey;
+	float: left;
+}
+.menu2{
+	width: 50%;
+	font-size: 50px;
+	border-bottom: 1px solid grey; 
+	border-top: 1px solid grey;
+	float: right;
+}
+.content{
+	
+}
+a:link, a:visited{
+	color: lightgreen;
+	text-decoration: none
+}
+a:hover, a:active{
+	color: red;
+	text-decoration: none
+}
+.body2{
+	background-image: url(../img/wolf.jpg);
+	color: white;
+}
+.gameinfo{
+	margin: 10px 0;
+	color: #666;
+	border: 1px solid grey;
+	line-height: 130%;
+	padding: 9px;
+	font-size: 14px;
+	background: rgba(0,0,0,0.7)
+}
+.afb{
+	width: 205px;
+	padding: 10px 0;
+	border: 1px solid grey;
+	float: left;
+}
+.afb img{
+	display: block;
+	padding: 0 10px;
+}
+.afb p{
+	padding: 10px 10px 0 10px;
+	margin: 0;
+}
+.info{
+	width: 680px;
+	float: right;
+}
+.clearboth{
+	display: block;
+	clear: both;
+}
+.even .afb{
+	float:right;
+}
+.even .info{
+	float:left;
+}
+.cent{
+	text-align: center;
+}
+h1{
+	color: #666;
+}
+h2{
+	color: lightblue;
+}
+.afb2{
+	width: 450px;
+	padding: 10px 0;
+	border: 1px solid grey;
+	margin: 20px auto;
+}
+.afb2 p{
+	padding: 10px 10px 0 10px;
+	margin: 0;
+}
+.afb3{
+	width: 205px;
+	padding: 10px 0;
+	border: 1px solid grey;
+	margin: 0 9px;
+	float: left
+}
+iframe[seamless]{
+	background-color: transparent;
+	border: 0px none transparent;
+	padding: 0px;
+	overflow: hidden;
+}

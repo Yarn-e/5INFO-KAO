@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+	<title>Legwork Does CSS3</title>
+	<!-- Meta -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="title" content="Legwork Does CSS3" />
+	<meta name="description" content="A CSS3 guide from Legwork Studio." />
+	<meta name="author" content="Legwork Studio (http://www.legworkstudio.com)" />
+
+	<link rel="shortcut icon" href="http://legworkstudio.com/favicon.ico" />
+
+	<!-- Whatever you do, do it with style -->
+	<link rel="stylesheet" href="../lib/css/screen.css" />
+	<link rel="stylesheet" href="transitions.css" />
+
+</head>
+<body>
+	<div id="main-wrap" class="container_12">
+		<div class="grid_12">
+			<h1>CSS3 | Transitions</h1>
+		</div>
+
+		<form id="transition-controls" class="grid_5">
+			<div class="rounded-container"></div>
+		</form>
+
+		<div id="transition-stage" class="grid_7 hidden">
+			<div id="ball" class="bouncing state_0">
+				<div id="sect_1"></div>
+				<div id="sect_2"></div>
+				<div id="sect_3"></div>
+				<div id="sect_4"></div>
+			</div>
+			
+			<div id="text" class="hidden">
+				<p class="text-fanciness">Dude, let's see some Text.</p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../lib/js/modernizr-1.7.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../lib/js/transitions/piecewise.js"></script>
+	<script type="text/javascript">
+		$(window).load(function(){
+			piecewise.segments.init();
+		});
+	</script>
+</body>
+</html>

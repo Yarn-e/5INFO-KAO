@@ -1,0 +1,125 @@
+/* 
+
+zet hier je naam 
+
+voor elementen op pagina 
+zet hieronder alle elementen, classes en id's die je zelf toevoegt aan deze oefening
+
+*/
+
+.container{
+	border: 5px dashed orange;
+	margin: 50px auto;
+	width: 900px;
+	padding: 10px;
+	background-image: url(../images/achtergrond.png)
+}
+#index{
+	background-color: #FFFF73;
+}
+h1{
+	font-size: 2em;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-align: center;
+	margin: 20px 0;
+}
+.foot{
+	text-align: center;
+	font-size: 9px;
+}
+.cent{
+	text-align: center;
+}
+.centerimg{
+	display: block;
+	margin: auto;
+}
+
+
+
+/* voor seamless effect van iframe */
+
+iframe[seamless]{
+    background-color: transparent;
+    border: 0px none transparent;
+    padding: 0px;
+    overflow: hidden;
+}
+
+/* voor het formulier */
+
+.rechts { 
+   position: relative;
+   clear: left;
+   float: left;
+   width: 250px;
+   margin-right: 5px;
+   line-height: 1.2em;
+   text-align: right;
+}   
+
+fieldset {
+		margin: 10px 0px;
+}
+
+legend {
+		font-size : 1.1em;
+		font-weight : bold;
+		background-color:greenyellow;
+}
+
+
+/* alles voor het menu */
+
+#navcontainer {
+   float: right;
+	 width: 600px;
+}
+
+#navlist
+{
+border-bottom: 1px solid #FFCC66;
+border-top: 1px solid #FFCC66;
+margin: 0px;
+margin-bottom: 30px;
+padding: 0px;
+padding-left: 110px;
+background-color: #FF9900;
+font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+padding-bottom: 10px;
+padding-top: 10px;
+}
+
+#navlist a, #navlist a:link, #navlist a:visited
+{
+border: 1px solid #FF9900;
+padding: 1px;
+padding-left: 0.5em;
+padding-right: 0.5em;
+color: #000000;
+font-weight: bold;
+text-decoration: none;
+}
+
+#navlist a:hover, #navlist a:active, #navlist a:focus
+{
+border: 1px solid #000000;
+padding: 1px;
+padding-left: 0.5em;
+padding-right: 0.5em;
+text-decoration: none;
+}
+
+#navlist li
+{
+padding: 10px;
+display: inline;
+font-size: 1.1em;
+}
+
+#navlist ul
+{
+margin: 0px;
+padding: 0px;
+}
+

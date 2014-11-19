@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.multi-col-container {
+	-webkit-column-width: 15em;
+	-webkit-column-gap: 2em;
+	-moz-column-width: 15em;
+	-moz-column-gap: 2em;
+	column-width: 15em;
+	column-gap: 2em;
+}

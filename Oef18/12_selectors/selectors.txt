@@ -1,0 +1,28 @@
+/* CSS */
+a[name*="item"] {
+	font: bold italic 12px/12px Georgia, "Times New Roman", serif;
+}
+
+a[name="first-item"] {
+	color: #eae938;
+}
+
+a[name^="second"] {
+	color: #9ad5f0;
+}
+
+a[name$="three"] {
+	color: #fccee6;
+}
+
+#links a:nth-child(4) {
+	color: #ec9d4d;
+}
+
+<!-- Markup -->
+<div id="links">
+	<a name="first-item">First Item</a>
+	<a name="second-item">Second Item</a>
+	<a name="item-three">Third Item</a>
+	<a name="item">Fourth Item</a>
+</div>

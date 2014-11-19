@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+	
+<head>
+	<meta charset="UTF-8">
+	<title>Korte enquete</title>
+	<meta name="author" content="yarne Decuyper">
+	<style>
+		#container{
+			width: 500px;
+			font-family: sans-serif;
+			margin: 25px auto;
+			border: 2px solid lightgreen;
+			border-radius: 10px;
+			padding: 10px;
+		}
+		.cent{
+			text-align: center;
+		}
+		label, .rechts{
+			position: relative;
+			clear: both;
+			float: left;
+			width: 250px;
+			margin-right: 5px;
+			text-align: right;
+			line-height: 1.3em;
+		}
+		h1{
+			color: Goldenrod;
+		}
+	</style>
+</head>
+	
+<body>
+	<div id="container">
+		<form action="mailto:mds@edukao.be">
+					<h1 class="cent">Kort enquêteformulier</h1>
+			<h2>Persoonlijke gegevens</h2>
+			
+			<p>
+				<label for="vnaam">Voornaam:</label>
+				<input type="text" name="vnaam" id="vnaam" autofocus placeholder="Hier uw voornaam" required>
+				<br>
+				<label for="naam">Naam:</label>
+				<input type="text" name="naam" id="naam" placeholder="Hier uw naam" required>
+				<br>
+				<label for="e-mail">Emailadress</label>
+				<input type="text" name="e-mail" id="e-mail" placeholder="Hier uw e-mailadres" required>
+				<br>
+				<label for="geboortejaar">Geboortejaar:</label>
+				<select name="geboortejaar" id="geboortejaar">
+					<option>Kies je geboortejaar</option>
+					<option value="2014">2014</option>
+					<option value="2013">2013</option>
+					<option value="2012">2012</option>
+					<option value="2011">2011</option>
+					<option value="2010">2010</option>
+					<option value="2009">2009</option>
+					<option value="2008">2008</option>
+					<option value="2007">2007</option>
+					<option value="2006">2006</option>
+					<option value="2005">2005</option>
+					<option value="2004">2004</option>
+					<option value="2003">2003</option>
+					<option value="2002">2002</option>
+					<option value="2001">2001</option>
+					<option value="2000">2000</option>
+					<option value="1999">1999</option>
+					<option value="1998">1998</option>
+					<option value="1997">1997</option>
+					<option value="1996">1996</option>
+					<option value="1997">1995</option>
+				</select>
+				<br>
+				<label>Geslacht:</label>
+				<input type="radio" name="geslacht" value="M" checked required>Man &nbsp;
+				<input type="radio" name="geslacht" value="V" required>Vrouw
+				<br>
+				<label for="Land">Land:</label>
+				<input type="text" name="Land" id="Land" required>
+			</p>
+			
+			<h2>Informatie over uw computer</h2>
+			<p>
+				<label>Welke browsers heb je tot uw beschikking:</label>
+				<input type="checkbox" name="browsers" value="Internet explorer">Internet explorer<br>
+				<span class="rechts">&nbsp;</span><input type="checkbox" name="browsers" value="Opera">Opera<br>
+				<span class="rechts">&nbsp;</span><input type="checkbox" name="browsers" value="Mozilla firefox">Mozilla firefox<br>
+				<span class="rechts">&nbsp;</span><input type="checkbox" name="browsers" value="Safari">Safari<br>
+				<span class="rechts">&nbsp;</span><input type="checkbox" name="browsers" value="Netscape">Netscape<br>
+				<span class="rechts">&nbsp;</span><input type="checkbox" name="browsers" value="Andere">Andere<br>
+			</p>
+			<p>
+				<label for="OS">Welk operating system heb je ?</label>
+				<select name="OS" id="OS" multiple required>
+					<option value="Windowns">Windowns</option>
+					<option value="Ubuntu/Linux">Ubuntu/Linux</option>
+					<option value="Mac-OS">Mac-OS</option>
+					<option value="Andere">Andere</option>
+				</select>
+			</p>
+
+			<p class="cent">
+				<input type="submit" value="Verzenden"> &nbsp; &nbsp;
+				<input type="reset" value="Reseten">
+			</p>
+		</form>
+	</div>
+
+
+</body>
+	
+</html>

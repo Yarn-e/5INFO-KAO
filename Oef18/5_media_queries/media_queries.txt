@@ -1,0 +1,39 @@
+/*CSS*/
+@media screen and (max-width:759px) {
+	body{
+		background-color: #9AD5F0; 
+	}
+	.grid_12 h4#sm_760{
+		display: block;
+		font-size:40px;
+	}
+	p{
+		color:#333;
+	}
+}
+
+@media screen and (min-width:760px) and (max-width:960px) {
+	body{
+		background-color: #AF4553;
+	}
+	.grid_12 h4#btw_760_960{
+		display: block;
+		font-size:50px;
+	}
+}
+@media screen and (min-width:961px) {
+	.grid_12 h4#bg_960{ 
+		display: block;
+		font-size:90px;
+	}
+}
+
+<!-- Markup -->
+<div class="grid_12">
+	<h1>CSS3 | Media Queries</h1> 
+
+	<p>Resize your browser window to see the effects of Media queries. </p>
+	<h4 id="sm_760" class="text-fanciness">smaller than 760px wide </h4>
+	<h4 id="btw_760_960" class="text-fanciness">btw 760px and 960px wide</h4>
+	<h4 id="bg_960" class="text-fanciness">bigger than 960px wide</h4>
+</div>

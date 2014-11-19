@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+.rounded-container {
+	background: #333;
+	padding: 50px;
+	border-radius: 10px 50px;
+}

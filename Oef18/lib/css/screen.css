@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+/****************************** 
+ * Imports                    *
+ *                            *
+ ******************************
+/                            */
+@import url('960.css');
+@import url('http://test.legworkstudio.com/css3-article/data/css/fonts.css');
+@import url('http://test.legworkstudio.com/css3-article/data/css/utils.css');
+
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/****************************** 
+ * Global                     *
+ *                            *
+ ******************************
+/                            */
+
+body {
+    color:#c2c2c2;
+    background: #222;
+    width: 100%;
+}
+
+html {
+    width: 100%;
+}
+
+
+
+/****************************** 
+ * Text                       *
+ *                            *
+ ******************************
+/                            */
+
+h1 {
+    font-family:'ChunkFiveRegular';
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 40px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+h2 { 
+    font-family: 'ChunkFiveRegular';
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 25px;
+    color: #fff;
+    padding: 25px 0 25px 0;
+}
+
+h3 { 
+    font-family: 'ChunkFiveRegular';
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 25px;
+    color: #fff;
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+
+.yellow {
+    color: #eae938;
+}
+
+.blue {
+    color: #9ad5f0;
+}
+
+.pink {
+    color: #fccee6;
+}
+
+.orange {
+    color: #ec9d4d;
+}
+
+.maroon {
+    color: #af4553;
+}
+
+.tan {
+    color: #f5f8d7;
+}
+
+ul, ol {
+    margin-bottom: 25px;
+}
+
+li {
+    list-style-type: circle;
+    font-style: italic;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+/* Links */
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #eae938;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.5s; 
+    -webkit-transition-property: color; 
+    -webkit-transition-duration: 0.5s; 
+}
+
+a:hover {
+    color: #eae938;
+    border-bottom: 2px solid #eae938;
+}
+
+/****************************** 
+ * Layout                     *
+ *                            *
+ ******************************
+/                            */
+
+#main-wrap {
+    padding: 100px 0;
+}
+
+header {
+    width: 100%;
+    background: #fff;
+}
+
+header img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 700px;
+    height: 500px;
+}
+
+section {
+    margin: 0 auto;
+    padding: 100px 0;
+    width: 700px;
+}
+
+.rounded-container {
+    background: #333;
+    padding: 50px;
+    border-radius: 10px 50px;
+}

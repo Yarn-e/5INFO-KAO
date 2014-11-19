@@ -1,0 +1,32 @@
+
+body {
+	Background-color: #B8D8DC;
+	color: "#FF0";
+	font-familly: Arial , Helvetica , sans-serif;
+	font-size: 10px;
+}
+		 
+img {
+	border: 0px;
+}
+	
+#Box1 {
+	float:right;
+}
+h1 {
+	color:#357E97;
+	text-allign:center;
+}
+h2 {
+  color:#357E97;
+	text-allign:center
+}
+a:link, a:visited {
+	text-decoration: none;
+	font-weight: none;
+	color:black;	
+}
+a:hover {
+  text-decoration: underline;
+  font-weight: bold
+}

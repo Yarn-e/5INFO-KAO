@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+a[name*="item"] {
+	font: bold italic 12px/12px Georgia, "Times New Roman", serif;
+}
+
+a[name="first-item"] {
+	color: #eae938;
+}
+
+a[name^="second"] {
+	color: #9ad5f0;
+}
+
+a[name$="three"] {
+	color: #fccee6;
+}
+
+#links a:nth-child(4) {
+	color: #ec9d4d;
+}

@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.grid_12 h4{
+	display: none;
+	text-transform: uppercase;
+}
+
+.text-fanciness {
+	font-family: 'ChunkFiveRegular';
+	color: #181818;
+	text-shadow: rgba(0, 0, 0, 1.0) -1px -1px 0,
+				 rgba(255, 255, 255, 0.1) 1px 1px 0;
+}
+
+@media screen and (max-width:759px) {
+	body{
+		background-color: #9AD5F0;
+	}
+	.grid_12 h4#sm_760{
+		display: block;
+		font-size:40px;
+	}
+	p{ 
+		color:#333;
+	}
+}
+
+@media screen and (min-width:760px) and (max-width:960px) {
+	body{
+		background-color: #AF4553;
+	}
+	.grid_12 h4#btw_760_960{
+		display: block;
+		font-size:50px;
+	}
+}
+
+@media screen and (min-width:961px) {
+	.grid_12 h4#bg_960{ 
+		display: block;
+		font-size:90px;
+	}
+}
