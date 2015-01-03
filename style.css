@@ -37,7 +37,7 @@ li {
 	width: 310px;
 	padding: 5px;
 	margin: 4px;
-	height: 724px;
+	height: 700px;
 }
 .left {
 	float: left;
@@ -45,7 +45,7 @@ li {
 	padding: 5px;
 	margin: 4px;
 	border-right: 1px solid grey;
-	height: 724px;
+	height: 700px;
 }
 header h1 {
 	text-align: center;
