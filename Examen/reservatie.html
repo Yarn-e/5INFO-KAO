@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>reservatie</title>
+		<meta name="description" content="Decuyper Yarne">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<h1>Reserveer je ticket online</h1>
+		<form action="mailto:zoomsxl@gmail.com">
+			<fieldset>
+				<legend>Persoonlijke gegevens</legend>
+				<p>
+					<label class="used" for="voornaam">Voornaam :</label>
+					<input type="text" name="voornaam" id="voornaam" required autofocus placeholder="Hier uw voornaam">
+				</p>
+				<p>
+					<label class="used" for="achternaam">Achternaam :</label>
+					<input type="text" name="achternaam" id="achternaam" required placeholder="Hier uw achternaam">
+				</p>
+				<p>
+					<label class="used" for="email">E-mailadres :</label>
+					<input type="text" name="email" id="email" required placeholder="Hier uw e-mailadres"
+				</p>
+			</fieldset>
+			<fieldset>
+				<legend>Ticket gegevens</legend>
+				<p>
+				<label class="used">Aantal</label>
+				<select name="aantal" id="aantal">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+				</p>
+				<p>
+					<label class="used" for="loveseat">Loveseat</label>
+					<input type="checkbox" name="loveseat" id="loveseat">
+				</p>
+				<p>
+					<label class="used">Film</label>
+					<input type="radio" class="left" name="kuif" id="kuif" value="DE AVONTUREN VAN KUIFJE"><label class="not" for="kuif">DE AVONTUREN VAN KUIFJE</label>
+					<input class="rechts" name="vist" id="vist" type="radio" value="HASTA LA VISTA"><label class="not" for="vist">HASTA LA VISTA</label>
+					<input class="rechts" name="saga" id="saga" type="radio" value="THE TWILGIHT SAGA"><label class="not" for="saga">THE TWILGIHT SAGA</label>
+				</p>
+			</fieldset>
+			<p class="cent">
+				<input type="submit" name="submit" value="Verzenden">
+				<input type="reset" name="reset" value="Invoer wissen">
+			</p>				 
+		</form>
+	</body>
+</html>

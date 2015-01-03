@@ -1,0 +1,280 @@
+/* menu bovenaan */
+#navigation{
+	margin-top: 20px;
+	height: 39px;
+	list-style: none;
+	position: relative;
+	text-align: center;
+	top: 1px;
+	width: 620px;
+	float: left;
+}
+#navigation li{
+    display: inline;
+    line-height: 39px;
+}
+#navigation li a:link,#navigation li a:visited{
+    display: inline-block;
+    color: #fff;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding: 0 16px;
+}
+#navigation li a:hover,#navigation li a:active,#navigation li a.active:link,#navigation li a.active:visited{
+    text-decoration: none;
+    background-color: #0078aa;
+}
+
+
+/* titels */
+h1 {
+  color: lime;
+}
+h2 {
+  color: red;
+}
+h3 {
+  color: yellow;
+}
+h5 {
+  color: lime;
+  font: 70px bold Arial,sans-serif;
+	text-align: center;
+	margin: 20px;
+}
+
+/* tabel in het midden zetten */
+.urentabelfilm {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* formulier */
+fieldset {
+	margin: 10px 0 0 0;
+	padding: 0;
+  background: transparent url(../images/filmrol.png) no-repeat bottom right;
+}
+legend {
+	padding: 5px;
+	margin-left: 1em;
+	color: black;
+  font-size: 1.2em;
+  background-color: #ddd;
+}
+.used, .rechts {
+	position: relative;
+	clear: left;
+	float: left;
+	width: 10em;
+	margin-right: 5px;
+	padding-right: 30px;
+	line-height: 1.4em;
+	text-align: right;
+	color: white;
+}
+.rechts {
+	width: 13px;
+	margin-left: 198px;
+	margin-right: 10px;
+}
+.not {
+	color: white;
+	clear: right;
+	float: left;
+}
+.cent {
+	clear: both;
+	text-align: center;
+}
+
+
+/* Styling by Yarne Decuyper **********************************************************/
+/* BODY ****************************************/
+.start {
+	background-color: #313131;
+}
+.left {
+	float: left;
+	margin-left: 3px;
+	margin-right: 10px;
+}
+/* CONTENT *******************************************************************/
+#container {
+	width: 960px;
+	height: 717px;
+	background-color: black;
+	border-radius: 20px;
+	margin: 30px auto;
+}
+#content {
+	width: 940px;
+	height: 589px;
+	margin: 0 10px 5px 10px;
+}
+#main {
+	width: 924px;
+	height: 565px;
+}
+footer {
+	text-align: center;
+	width: 940px;
+	height: 29px;
+	color: white;
+	margin-bottom: 5px;
+}
+#foto1 {
+	width: 300px;
+	height: 100px;
+	float: left;
+	margin: 10px 0 0 10px;
+}
+.center {
+	margin: 0 auto;
+	width: 800px;
+}
+
+/* CONTENT FILMS ****************************************************************/
+#contentfilm {
+	width: 725px;
+	height: 500px;
+}
+#filmnav {
+	width: 167px;
+	float: right;
+	height: 400px;
+}
+/* NAV FILM ************************************************************************/
+ul.filmnav {
+	list-style: square;
+	margin-left: 20px;
+	color: blue;
+}
+ul.filmnav li {
+	list-style: square;
+	padding-bottom: 10px;
+}
+ul.filmnav li a {
+	color: white;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-decoration: none;
+}
+ul.filmnav li a:hover {
+	color: yellow;
+	font-weight: bold;
+	text-decoration: none;
+}
+/* CONTENT FILM *********************************************************************/
+.filminfo {
+	width: 450px;
+	height: 176px;
+	float: left;
+}
+.filminfo p {
+	color: white;
+}
+.filmfoto {
+	width: 195px;
+	height: 155px;
+	float: right;
+}
+.filmfoto img {
+	float: right;
+}
+.filmtable {
+	width: 450px;
+	height: 190px;
+	float: left;
+}
+.filmtable table {
+	color: white
+}
+.filmtable table th {
+	text-decoration: underline;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+.filmtable table td {
+	text-decoration: none;
+	text-align: left;
+	padding-bottom: 10px;
+}
+.filmtable table td a {
+	text-decoration: underline;;
+	text-align: left;
+	color: white;
+}
+.fotos {
+	width: 195px;
+	height: 80px;
+	float: right;
+}
+.centerfoto {
+	margin-left: 50px;
+	margin-top: 10px;
+}
+.filmbordertable {
+	width: 171px;
+	height: 82px;
+	float: right;
+	margin-top: 60px;
+	color: white;
+}
+.filmbordertable table {
+	border: 1px solid white;
+	margin: 10px 0 0 0;
+}
+.filmbordertable table th,
+.filmbordertable table th,
+.filmbordertable table td {
+	border: 1px solid white;
+	padding: 1px;
+}
+.filmbordertable table td {
+	text-align: center;
+}
+.clear {
+	clear: both;
+}
+
+/* CONTENT PROG *****************************************************/
+table.special{
+	border: 1px solid white;
+	width: 100%;
+}
+table.special tr th{
+	border: 1px solid white;
+	background-color: grey;
+}
+table.special tr td {
+	border: 1px solid white;
+	color: white;
+	text-align: center;
+}
+table.special .fil	{
+	background-color: lime;
+	height: 2px;
+}
+table.special .title h3,
+table.special .title h2 {
+	margin-top: 5px;
+	text-align: left;
+}
+/* CONTENT INFO *********************************************/
+#fotoz {
+	width: 501px;
+	margin: 0 auto;
+}
+#zaal {
+	float: left;
+	width: 500px;
+	height: 100px;
+}
+.centr {
+	text-align: center;
+}

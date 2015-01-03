@@ -1,0 +1,84 @@
+DE AVONTUREN VAN KUIFJE:HET GEHEIM VAN DE EENHOORN
+
+
+Kuifje, een jonge en onverschrokken reporter, ontmoet de excentrieke kapitein Haddock en helpt hem bij zijn zoektocht naar de schat van Haddocks voorvader Francis. Maar er zijn kapers op de kust...
+
+regisseur: Steven Spielberg
+genre: Animatie
+Cast: Jamie Bell, Daniel Craig, Andy Serkis, Simon Pegg, Nick Frost
+duur: 1 uur 46 minuten
+releasedatum: 26/10/2011
+oorsprong: USA,New Zealand
+website: http://www.tintin.com/
+
+icon_3D
+icon_alle
+icon_KT
+
+MA-VR - 20h00 22h 
+ZA 18h 20h00 22h 
+ZO 15h 20h00 - 
+
+
+-----------------------------------------------------------------------------
+
+HASTA LA VISTA
+
+Drie jonge gasten houden van wijn en vrouwen. Het eerste proeven ze met plezier, maar het tweede hebben ze nog nooit mogen smaken. Onder het mom van een wijntour reizen de drie naar Spanje om eindelijk van de grond te gaan. Niets zal hen tegenhouden. Zeker niet het feit dat de eerste blind is, de tweede in een rolstoel zit en de derde volledig verlamd is...
+
+regisseur: Geoffrey Enthoven
+genre: Drama, Komedie
+Cast: Gilles De Schrijver, Robrecht Vanden Thoren, Tom Audenaert, Johan Heldenbergh, Karlijn Sileghem, Katelijne Verbeke, Karel Vingerhoets, Isabelle De Hertogh
+duur: 1 uur 55 minuten
+releasedatum: 14/09/2011
+oorsprong: Belgium
+website: http://www.hastalavistadefilm.be/
+
+icon_Humor
+icon_KT
+icon_6
+icon_digital_cinema
+
+
+MA-VR - 20h00 23h 
+ZA 17h 20h00 23h 
+ZO 15h 19h00 - 
+
+
+-----------------------------------------------------------------------------
+
+THE TWILIGHT SAGA: BREAKING DAWN - PART I
+
+In The Twilight Saga: Breaking Dawn part 1 krijgen Bella, Edward en hun familie af te rekenen met de onvoorziene gevolgen van hun langverwachte huwelijk. Na de huwelijksreis zorgen een zwangerschap en een bewogen bevalling voor beroering en een onverwachte verandering in het gedrag van Jacob Black...
+
+regisseur: Bill Condon
+genre: Liefde / Romantiek, Fantasy
+Cast: Robert Pattinson, Kristen Stewart, Taylor Lautner
+duur: 1 uur 57 minuten
+releasedatum: 16/11/2011
+oorsprong: USA 
+website: http://www.breakingdawn-themovie.com/
+
+icon_romance
+icon_12
+icon_KT
+icon_digital_cinema
+
+MA-VR - 20h00 22h30 
+ZA 17h30 20h00 22h30 
+ZO 15h30 20h00 - 
+
+
+----------------------------------------------------------------------------------
+
+Example
+
+An image-map, with clickable areas:
+
+<map name="planetmap">
+   <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+   <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+   <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus">
+</map> 
+<img src="planets.gif" alt="Planets" usemap="#planetmap">
+

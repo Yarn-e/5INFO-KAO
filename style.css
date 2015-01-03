@@ -1,62 +1,88 @@
-body{
+/* Basic ******************************************/
+
+body {
 	background-image: url(Oef9/img/wolf.jpg)
 }
-#container{
+header {
+	padding: 5px;
+	background-color: rgba(26, 30, 30, 0.7);
+}
+footer {
+	padding: 5px;
+	background-color: rgba(26, 30, 30, 0.7);
+	font-weight: bold;
+	text-align: center;
+}
+h1 {
+	color: grey;
+	font-size: 35px;
+	text-align: center;
+}
+li {
+	color: grey;
+	line-height: 1.4em;
+}
+
+/* Content ****************************************/
+
+#container {
 	font-family: 'Open Sans', sans-serif;
 	width: 660px;
 	margin: auto;
 	background-color: rgba(235, 235, 235, 0.8);
 }
-header{
-	padding: 5px;
-	background-color: rgba(26, 30, 30, 0.7);
-}
-footer{
-	padding: 5px;
-	background-color: rgba(26, 30, 30, 0.7);
-	font-weight: bold;
-	text-align: center;
-}
-h1{
-	color: grey;
-	font-size: 35px;
-	text-align: center;
-}
-header h1{
-	text-align: center;
-}
-a:link, a:visited{
-	color: black;
-	text-decoration: none;
-	font-weight: bold;
-}
-a:active, a:hover{
-	color: white;
-	text-decoration: none;
-	font-size: 17px;
-}
-#right{
+.right {
 	float: left;
 	border-right: grey;
 	width: 310px;
 	padding: 5px;
 	margin: 4px;
+	height: 724px;
 }
-li{
-	color: grey;
-	line-height: 1.4em;
-}
-#clearboth{
-	clear: both;
-}
-#left{
+.left {
 	float: left;
 	width: 310px;
 	padding: 5px;
 	margin: 4px;
 	border-right: 1px solid grey;
+	height: 724px;
 }
-.photo{
+header h1 {
+	text-align: center;
+}
+#clearboth {
+	clear: both;
+}
+.Subtitle, .Subtitlejs {
+	padding: 5px;
+	text-align: left;
+	margin: 0px;
+}
+.Subtitlejs {
+	
+}
+.Subtitle h1, .Subtitlejs h1 {
+	border-bottom: 2px solid black;
+	margin: 5px;
+	font-size: 40px;
+}
+
+/* Navigation ******************************************/
+
+a:link, a:visited {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:active, a:hover {
+	color: white;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+/* Picture *********************************************/
+
+.photo {
   margin: 30px;
   position: absolute;
   top: 85px;
@@ -64,7 +90,7 @@ li{
   width: 200px;
   height: 267px;
 }
-.photo span{
+.photo span {
   width: 20px;
   height: 18px;
   display: block;
