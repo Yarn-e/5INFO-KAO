@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Yarn</title>
+		<meta name="description" content="Yarne Decuyper">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<script>
+      //Gegeven
+        var kort = 0;
+        var bijdrage = 25;
+        var kort50 = 5;
+        var kortkid = 2.5;
+        var kort21 = 5;
+        var korttijd = 2.5;
+			//Invoer
+        var naam = prompt('Geef uw voornaam in','');
+        var leeftijd = parseInt(prompt('Geef uw leeftijd in',''));
+        var kinderen = parseInt(prompt('Geef uw aantal kinderen in',''));
+        var jarenlid = parseInt(prompt('Hoelang bent u al lid ?',''));
+			//Verwerking + Uitvoer
+         document.write('<h1>Bijdrage berekening voor ' + naam + '</h1>');
+         document.write('<h2>Standaardbijdrage : ' + bijdrage + ' euro </h2>');
+         document.write('<h2>Kortingen :</h2>');
+      
+        if (leeftijd < 21) { //Korting van leeftijd berekenen
+          kort = kort + kort21
+          document.write('<b> - leeftijd < 21 jr : -'+ kort21 +' euro</b><br>');
+        } else if (leeftijd >= 50) {
+          kort = kort + kort50;
+          document.write('<b> - leeftijd >= 50 jr : -'+ kort50 +' euro</b><br>');
+        } else { }
+        if ((kinderen * kortkid) == 0) { //Kinderkorting berekenen
+        } else if ((kinderen * kortkid) > 10) {
+          kort = kort +10;
+          document.write('<b> - kinderkorting : - 10 euro</b><br>');
+        } else {
+          kort = kort + (kinderen * kortkid);
+          document.write('<b> - kinderkorting : - '+(kinderen * kortkid)+' euro</b><br>');
+        }
+        if (jarenlid > 25) { //Aantal jaren lid korting berekenen
+          kort = kort + korttijd;
+          document.write('<b> - > 25 jaar lid : -'+korttijd+' euro');
+        } else {}
+        if (kort == 0) { //Korting uitdelen
+          document.write('<b> - geen kortingen</b>')
+        } else if (kort >12.5){
+          bijdrage = bijdrage - 12.5;
+          document.write('<h2> Totale korting : '+kort+' euro</h2>');
+          document.write('<h2>MAX korting overschreden ! korting = 12.5 euro</h2>');
+        } else {
+          bijdrage = bijdrage - kort;
+          document.write('<h2> Totale korting : '+kort+' euro</h2>');
+        }
+        document.write('<h2> Totaal te betalen lidgeld : '+ bijdrage +' euro</h2>');
+		</script>
+	</body>
+</html>

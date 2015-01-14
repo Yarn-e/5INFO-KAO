@@ -1,0 +1,1 @@
+<img src="http://www.mobile-barcodes.com/qr-code-generator/generator.php?str=tekst komt hier&barcode=message" alt="QR Code" style="border:none;" />

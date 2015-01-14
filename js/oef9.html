@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Oef2.9</title>
+		<meta name="description" content="Decuyper Yarne">
+		<style>
+			.rood {
+				color: red;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<script>
+			var get1 = parseInt(prompt("Geef een eerste getal in",""));
+			var get2 = parseInt(prompt("Geef een tweede getal in",""));
+			
+			document.write("U voerde de getallen " + get1 + " en " + get2 + " in.<br><hr>");
+			document.write("<b>Is het eerste getal grooter dan het tweede getal ?</b> : <span class='rood'>" +(get1>get2) + "</span><br>");
+			document.write("<b>Is het eerste getal kleiner dan het tweede getal ?</b> : <span class='rood'>" + (get1<get2) + "</span><br>");
+			document.write("<b>Is het eerste getal gelijk dan het tweede getal ?</b> : <span class='rood'>" + (get1==get2) + "</span>");
+		</script>
+	</body>
+	
+</html>

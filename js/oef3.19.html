@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Oef 3.19</title>
+		<meta name="description" content="Decuyper Yarne">
+		<style>
+			table, td, tr {
+				border: 1px solid black;
+			}
+			td {
+				padding: 10px;
+			}
+			caption {
+				text-align: center;
+				font-weight: bold;
+				font-size: 30px;
+			}
+      #cent {
+        margin: 0 auto;
+        width: 580px;
+      }
+		</style>
+	</head>
+	<body>
+    <div id="cent">
+		<script>
+		//Gegeven
+				var prijs1 = 1.75;
+				var prijs2 = 1.20;
+				var prijs3 = 0.95;
+				var nod1 = 1/3;
+				var nod2 = 1/4;
+				var nod3 = 5/12;
+			//Invoer
+				var liter = parseInt(prompt('Geef het aantal liter appretief dat je nodig hebt.',''));
+			//Verwerking
+				var pompsap = Math.round(100 * (liter * nod1)) /100;
+				var appsap = Math.round(100 * (liter * nod2)) /100;
+				var caclimo = Math.round(100 * (liter * nod3)) /100;
+			
+				var totprijs = Math.round(100 * (pompsap * prijs1 + appsap * prijs2 + caclimo * prijs3)) /100;
+			
+				var pompsapafr = Math.ceil(liter * nod1);
+				var appsapafr = Math.ceil(liter * nod2);
+				var caclimoafr = Math.ceil(liter * nod3);
+			
+				var totprijsafr = Math.ceil(pompsapafr * prijs1 + appsapafr * prijs2 + caclimoafr * prijs3);
+			
+			//Uitvoer
+				document.write('<table><caption>Aperitief maison</caption><tr><td><br>Voor ' + liter + ' liter aperitief heb je:<br>');
+				document.write('<ul><li>' + pompsap + ' l pompelmoessap ( ' + pompsapafr + ' l aankopen )</li>');
+				document.write('<li>' + appsap + ' l pompelmoessap ( ' + appsapafr + ' l aankopen )</li>');
+				document.write('<li>' + caclimo + ' l pompelmoessap ( ' + caclimoafr + ' l aankopen )</li></ul>');
+			
+				document.write('<br>Nodig <br><br>Totale prijs :<b>' + totprijs + ' &euro;</b> voor uw aperitief');
+				document.write('<br>Totale prijs in aankoop : <b>' + totprijsafr + ' &euro;</b><br></td>');
+				
+				document.write('<td><img src="img_oef3.20/afb.jpg" alt="Aperetief"></td></tr></table>');
+		</script>
+      </div>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Oef 2.16</title>
+		<meta name="description" content="Decuyper Yarne">
+		<style>
+			table, td {
+				border: 1px solid black;
+			}
+			caption {
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			//Invoer
+			var opbrengst = 250;
+			var prijs = 20;
+			var grote_basis = parseInt(prompt("Geef de lengte van de grote basis in",""));
+			var kleine_basis = parseInt(prompt("Geef de lengte van de kleine basis in",""));
+			var hoogte = parseInt(prompt("Geef de lengte van de hoogte in",""));
+			//Verwerking
+			var oppervlakte = (grote_basis + kleine_basis) * hoogte/2;
+			var opbrengstveld = (oppervlakte / 100) * opbrengst;
+			var opbrengstpatat = (opbrengstveld/100) * 20;
+			//Uitvoer
+			document.write("<table><caption>Berekening aardappelveld</caption><tr><td>Grote basis :</td><td>" + grote_basis +" m</td></tr>");
+			document.write("<tr><td>Kleine basis :</td><td>" + kleine_basis +" m</td></tr>");
+			document.write("<tr><td>Hoogte :</td><td>" + hoogte + " m</td></tr>");
+			document.write("<tr><td>Oppervlakte</td><td>" + oppervlakte + " m&sup2;</td></tr>");
+			document.write("<tr><td>Opbrengst :</td><td>" + opbrengst + " kg aardappelen</td></tr>");
+			document.write("<tr><td><b>Prijs :</b></td><td><b>" + opbrengstpatat + " &euro;</b></td></tr></table>");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,162 @@
+/* Algemeen ******************************************************************/
+p {
+  color: grey;
+}
+ul, ol {
+  color: grey;
+}
+a {
+  color: black;
+  font-weight: bold;
+}
+a:visited {
+  color: #333;
+  display: block;
+  text-decoration: none;
+}
+iframe {
+  background-color: transparent;
+  overflow: hidden;
+  border: 0px;
+  height: 650px;
+  width: 100%;
+}
+fieldset {
+  width: 960px;
+  margin: 0 auto;
+  color: #222;
+  background-color: #FFF;
+}
+label {
+  position: relative;
+  clear: both;
+  float: left;
+  width: 300px;
+  margin-right: 5px;
+  text-align: right;
+  line-height: 1.3em;
+}
+
+/* Body **********************************************************************/
+body,
+#frame {
+	overflow-y: scroll;
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	background-color: #F1F1F1; 
+}
+#frame {
+	display: block;
+	width: 960px;
+	margin: 0 auto;
+}
+#frame2 {
+	margin-top: 70px;
+}
+
+
+/* Header ********************************************************************/
+
+#log {
+  margin: 0 auto;
+  display: block;
+  width: 567px;
+}
+
+
+/* Navigatie *****************************************************************/
+
+#leftnav {
+	float: left;
+	border:3px solid #DDD;
+	width: 260px;
+	background-color: #FFF;
+	padding: 5px;
+	position: fixed;
+}
+#leftnav .activ a {
+	color: black;
+	font-weight: bold;
+}
+#leftnav li {
+	color: black;
+	font-weight: bold;
+}
+
+#nav {
+	background-color: #222;
+	width: 100%;
+	top: 0;
+	font-size: 12px;
+}
+#nav-wrapper {
+	width: 960px;;
+	margin: 0 auto;
+	text-align: center;
+}
+#nav ul,
+#leftnav ul,
+ul.overzicht {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+#nav ul li {
+	display: inline-block;
+}
+#nav ul li:hover {
+	background-color: #333;
+}
+#nav ul li a,
+#leftnav ul li a,
+ul.overzicht li a {
+	color: #999;
+	display: block;
+	padding: 10px;;
+	text-decoration: none;
+}
+ul.overzicht li a {
+  padding-left: 0;
+}
+#nav ul li a:hover {
+  color: #FFF;
+}
+#leftnav ul li a:hover,
+ul.overzicht li a:hover {
+  color: #000;
+}
+#leftnav h1 {
+  padding-left: 10px;
+}
+body.left-nav #content {
+  margin-left: 280px;
+}
+
+
+/* Inhoud ********************************************************************/
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+	text-align: left;
+}
+#content {
+	background-color: #FFF;
+	border: 3px solid #DDD;
+	padding: 20px;
+	margin: 20px 0 0 0;
+  box-shadow: 10px 10px 5px #CCC;
+}
+#Box1 {
+	float: right;
+  margin: 0 0 0 10px;
+}
+
+.cent {
+	text-align: center;
+}
+
+#right {
+	float: right;
+}

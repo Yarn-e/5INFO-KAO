@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Web Fonts Styling</title>
+
+	<meta charset="utf-8" />
+	<meta name="author" content="uw naam hier" />
+	
+	<style type="text/css">
+		body {
+			background: #423C4D;
+			color: #C4C1C8;
+			font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			line-height: 1.6;
+			margin: 0 auto;
+			padding: 100px 0;
+			width: 660px;
+			text-shadow: 1px 1px rgba(0,0,0,.8)
+		}
+		h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
+			color: #fff;
+			margin: 24px auto 12px;
+			line-height: 1.2;
+			text-shadow: none;
+		}
+		h1 {
+			font-size: 42px;
+			font-family: CaviarDreamsRegular, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+			font-weight: 100;
+			text-align: center;
+			width: 500px;
+		}
+		h2 {
+			font-size: 36px;
+			font-weight: 100;
+			letter-spacing: .1em;
+		}
+		h3 {
+			font-size: 38px;
+			text-shadow: 5px 5px black;
+			position: relative;
+		}
+		h4 {
+			font-family: CaviarDreamsRegular, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+			font-size: 36px;
+			font-weight: normal;
+			text-transform: lowercase;
+			letter-spacing: .5em;
+		}
+		h4 strong {
+			text-transform: uppercase;
+		} 
+		h5 {
+			font-size: 30px;
+			font-stretch: condensed;
+		}
+		h6 {
+			color: #fff;
+			-webkit-text-stroke: 1px #333;
+			-webkit-text-fill-color: #423C4D;
+			font-size: 48px;
+			font-stretch: condensed;
+			position: relative;
+			padding: 10px;
+			text-align: center;
+			text-shadow: 3px 3px 8px #BD9E59,
+				 -3px 3px 8px #7EBD56,
+				 3px -3px 8px #964BBD,
+				 -3px -3px rgba(255,255,255,.3);
+			-webkit-transform: rotate(-5deg) scale(1.5);
+			-moz-transform: rotate(-5deg) scale(1.5);
+			transform: rotate(-5deg) scale(1.5);
+		}
+		h6:after {
+			content: "";
+			display: block;
+			height: 52px;
+			left: 0;
+			position: absolute;
+			top: 15px;
+			width: 100%;
+			background: -moz-linear-gradient(top,rgba (66,60,77,.8) 0%,
+				rgba(66,60,77,0) 90%);
+			background: -webkit-linear-gradient(top,rgba (66,60,77,.8) 0%,
+				rgba(66,60,77,0) 100%);
+			background: linear-gradient(top,rgba (66,60,77,.8) 0%,
+				rgba(66,60,77,0) 100%);
+		}
+		
+		blockquote {
+			background: #918F94 url('images/bg-notepad.jpg') left 10px;
+			color: #333;
+			float: right;
+			font-family: DesyrelRegular;
+			font-size: 18px;
+			line-height: 23px;
+			margin: 0 -24px 1em 1em;
+			padding: 10px 15px;
+			text-shadow: -1px -1px rgba(0,0,0,.15);
+			width: 300px;
+			-webkit-box-shadow: 2px 2px white;
+			-mox-box-shadow: 3px 3px 3px rgba(0,0,0,.35)
+		}
+		blockquote p {
+			margin: 0;
+		}
+		blockquote p:first-of-type {
+			text-indent: 0;
+		}
+		.fin{
+			color: #fff;
+			font-family: TangerineRegular, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+			font-style: italic;
+			font-size: 120px;
+			margin: 0;
+			position: relative;
+			text-align: center;
+			text-shadow: 3px 3px black;
+			-webkit-transition: all 1s ease-in-out;
+			-moz-transition: all 1s ease-in-out;
+			-o-transition: all 1s ease-in-out
+		}
+		.fin:hover {
+			-webkit-transform: rotate(-5deg) scale(1.5);
+			-moz-transform: rotate(-5deg) scale(1.5);
+			transform: rotate(-5deg) scale(1.5);
+		}
+		.fin:hover:after {
+			content: "Fin";
+			display: block;
+			height: 52px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			text-shadow: 3px 3px 8px #BD9E59,
+				-3px -3px 8px #BD4B3B;
+		}
+		@font-face {
+    font-family: 'CaviarDreamsRegular';
+    src: url('fonts/CaviarDreams-webfont.eot');
+    src: url('fonts/CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/CaviarDreams-webfont.woff') format('woff'),
+         url('fonts/CaviarDreams-webfont.ttf') format('truetype'),
+         url('fonts/CaviarDreams-webfont.svg#CaviarDreamsRegular') format('svg');
+		}
+
+		@font-face {
+    font-family: 'DesyrelRegular';
+    src: url('fonts/desyrel-webfont.eot');
+    src: url('fonts/desyrel-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/desyrel-webfont.woff') format('woff'),
+         url('fonts/desyrel-webfont.ttf') format('truetype'),
+         url('fonts/desyrel-webfont.svg#DesyrelRegular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+		}
+
+		@font-face {
+    font-family: 'TangerineRegular';
+    src: url('fonts/Tangerine_Regular-webfont.eot');
+    src: url('fonts/Tangerine_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Tangerine_Regular-webfont.woff') format('woff'),
+         url('fonts/Tangerine_Regular-webfont.ttf') format('truetype'),
+         url('fonts/Tangerine_Regular-webfont.svg#TangerineRegular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	
+	<h1>Quick Brown Fox jumps over...</h1>
+	
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sem lorem, gravida ut pellentesque sed, porttitor sit amet massa. Aliquam nec mi id purus vulputate adipiscing ac in justo. Duis at leo eu velit hendrerit mattis.</p>
+	
+	<h2>Playing with font weight</h2>
+	<p>Donec imperdiet lorem non turpis tincidunt nec condimentum odio semper. Vivamus eu purus velit, vitae semper urna. Aenean id ipsum nunc, eu pretium purus. Fusce ut diam sit amet risus sagittis malesuada eu ac ipsum. Sed lectus eros, euismod vel elementum eu, cursus ut lacus. Sed viverra fringilla nunc, at ultrices justo commodo id. Quisque tristique risus eget risus dignissim venenatis. Donec in massa quam.<br /> Fusce suscipit libero gravida nulla consectetur at placerat sapien ultricies.</p>
+	
+	<blockquote>
+		<p>Quisque rhoncus, metus at egestas laoreet, turpis tortor dictum erat, vestibulum suscipit dolor magna vitae massa.</p>
+	</blockquote>
+	
+	<p>Quisque rhoncus, metus at egestas laoreet, turpis tortor dictum erat, vestibulum suscipit dolor magna vitae massa. Aenean id ipsum nunc, eu pretium purus. Fusce ut diam sit amet risus sagittis malesuada eu ac ipsum. Sed lectus eros, euismod vel elementum eu, cursus ut lacus. Sed viverra fringilla nunc, at ultrices justo commodo id. Quisque tristique risus eget risus dignissim venenatis. Donec in massa quam. Fusce suscipit libero gravida nulla consectetur at placerat sapien ultricies.</p>
+	
+	<h3>Fun with text-shadow</h3>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sem lorem, gravida ut pellentesque sed, porttitor sit amet massa. Aliquam nec mi id purus vulputate adipiscing ac in justo. Duis at leo eu velit hendrerit mattis.</p>
+	
+	<h4>Transform <strong>text</strong>!</h4>
+	<p>Donec imperdiet lorem non turpis tincidunt nec condimentum odio semper. Vivamus eu purus velit, vitae semper urna. Aenean id ipsum nunc, eu pretium purus. Fusce ut diam sit amet risus sagittis malesuada eu ac ipsum. Sed lectus eros, euismod vel elementum eu, cursus ut lacus. Sed viverra fringilla nunc, at ultrices justo commodo id. Quisque tristique risus eget risus dignissim venenatis. Donec in massa quam.<br /> Fusce suscipit libero gravida nulla consectetur at placerat sapien ultricies.</p>
+	
+	<h5>Font stretch</h5>
+	<p>Donec imperdiet lorem non turpis tincidunt nec condimentum odio semper. Vivamus eu purus velit, vitae semper urna. Aenean id ipsum nunc, eu pretium purus. Fusce ut diam sit amet risus sagittis malesuada eu ac ipsum. Sed lectus eros, euismod vel elementum eu, cursus ut lacus. Sed viverra fringilla nunc, at ultrices justo commodo id. Quisque tristique risus eget risus dignissim venenatis. Donec in massa quam.<br /> Fusce suscipit libero gravida nulla consectetur at placerat sapien ultricies.</p>
+	
+	<h6>Some fun with styles</h6>
+	
+	<p class="fin">~ Fin ~</p>
+
+</body>
+</html>

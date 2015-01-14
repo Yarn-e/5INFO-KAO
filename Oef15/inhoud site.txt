@@ -1,0 +1,63 @@
+-----------------------------------------------------------------------------------
+welkom.html
+-----------------------------------------------------------------------------------
+De Cycloon 
+
+Vakantie in de Panne.
+Zon, zee en strand.
+Zalig genieten in vakantiehuis De Cycloon.
+
+-----------------------------------------------------------------------------------
+beschijving.html
+-----------------------------------------------------------------------------------
+De Cycloon 
+
+Volledig bemeubeld vakantiehuis: 
+
+•kelder met berging en diepvriestoestel 
+•gelijkvloers : 
+  -living en volledig ingerichte keuken (75 m2) met gasfornuis, microgolf en koelkast 
+  -toilet 
+  -1 TV-toestel met kabeldistributie 
+•achteraan zonneterras met bloementuintje, tuinmeubelen en barbecue 
+•vooraan rotstuintje 
+•garage en parking voor 4 auto's 
+•afsluitbaar smeedijzeren hek aan de straatkant 
+•afstand tot de zee: circa 80 meter
+
+-----------------------------------------------------------------------------------
+adres.html
+-----------------------------------------------------------------------------------
+Het adres van ons huisje :
+De Cycloon 
+Koninginnelaan 53 
+8660 De Panne 
+
+-----------------------------------------------------------------------------------
+Inlichtingen.html
+-----------------------------------------------------------------------------------
+Inlichtingen
+
+Vul onderstaand formulier in om inlichtingen te vragen. 
+
+Naam   
+Voornaam  
+Straat en nr  
+Postcode  
+Woonplaats 
+Telefoonnummer 
+E-mailadres
+Vraag  
+
+-----------------------------------------------------------------------------------
+link naar de panne : http://http://www.depanne.be
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+link naar het weer : http://www.weeronline.nl/Europa/Belgie/De-Panne/4054549
+-----------------------------------------------------------------------------------
+
+  
+
+ 
+

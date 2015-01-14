@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Yarn</title>
+		<meta name="description" content="Yarne Decuyper">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<script>
+			//Invoer
+			var lengte = parseFloat(prompt('Geef uw lengte',''));
+			var gewicht = parseFloat(prompt('Geef uw gewicht',''));
+			//Verwerking
+				var BMI = gewicht / (lengte * lengte);
+				document.write('Lengte : ' + lengte + ' m');
+				document.write('<br>Gewicht : ' + gewicht + ' kg');
+				document.write('<br>Jouw BMI : ' + BMI + '<br>');
+				if (BMI < 18.5) {
+					document.write('Ondergewicht');
+				} else if (BMI > 18.5 && BMI <24.9) {
+					document.write('Perfect, houden zo');
+				} else if (BMI > 25 && BMI <29.9) {
+					document.write('Geen risico maar probeer niet dikker te worden');
+				} else if (BMI > 30 && BMI <39.9) {
+					document.write('Vermageren is een must');
+				} else {
+					document.write('Dringend vermageren, overgewicht');
+				}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'CaviarDreamsRegular';
+    src: url('fonts/CaviarDreams-webfont.eot');
+    src: url('fonts/CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/CaviarDreams-webfont.woff') format('woff'),
+         url('fonts/CaviarDreams-webfont.ttf') format('truetype'),
+         url('fonts/CaviarDreams-webfont.svg#CaviarDreamsRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'DesyrelRegular';
+    src: url('fonts/desyrel-webfont.eot');
+    src: url('fonts/desyrel-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/desyrel-webfont.woff') format('woff'),
+         url('fonts/desyrel-webfont.ttf') format('truetype'),
+         url('fonts/desyrel-webfont.svg#DesyrelRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'TangerineRegular';
+    src: url('fonts/Tangerine_Regular-webfont.eot');
+    src: url('fonts/Tangerine_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Tangerine_Regular-webfont.woff') format('woff'),
+         url('fonts/Tangerine_Regular-webfont.ttf') format('truetype'),
+         url('fonts/Tangerine_Regular-webfont.svg#TangerineRegular') format('svg');
+}

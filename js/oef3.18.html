@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Oef 3.18</title>
+		<meta name="description" content="Decuyper Yarne">
+	</head>
+	<body>
+		<script>
+            //Gegeven
+            var datum = new Date();
+			var jaarnu = datum.getFullYear();
+            //Invoer
+            var voornaam = prompt("Geef uw voornaam.","");
+            var geboortejaar = parseInt(prompt("Geef uw geboortejaar in.",""))
+            //Berekening
+            var leeftijd = jaarnu - geboortejaar;
+			//Uitvoer
+            document.write("Hallo " + voornaam + ". <br>Je bent " + leeftijd + " jaar oud.");
+		</script>
+	</body>
+</html>

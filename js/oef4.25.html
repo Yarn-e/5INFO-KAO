@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Yarn</title>
+		<meta name="description" content="Yarne Decuyper">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<script>	
+			//Invoer
+			
+			var aankoop = parseInt(prompt('Geef uw aankoopprijs in',''));
+			var verkoop = parseInt(prompt('Geef uw verkooppprijs in',''));
+			//Uitvoer
+			
+			var winst = verkoop - aankoop;
+			document.write('Aankoopcijfer : ' + aankoop + ' &euro;');
+			document.write('<br>Verkoopcijfer : ' + verkoop + ' &euro;');
+			document.write('<br>Winst/verlies : ' + winst  + ' &euro;<br><hr>');
+			//Verwerking + Uitvoer
+			
+			if (winst == 0) {
+				document.write('Er is winst noch verlies gemaakt');
+			} else if (winst > 0) {
+				document.write('Er is winst gemaakt');
+			} else {
+				document.write('Er is verlies gemaakt');
+			}
+			
+		
+		</script>
+	</body>
+</html>
+

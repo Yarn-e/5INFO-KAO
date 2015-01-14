@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Oef 2.15</title>
+		<meta name="description" content="Decuyper Yarne">
+	</head>
+	<body>
+		<script>
+			//Invoer
+			var prijsPL = parseInt(prompt("Geef de Prijs per Liter in",""));
+			var afstand = parseInt(prompt("Geef de afstand in",""));
+			var verbruik = 6;
+			//Verwerking
+			var totverb = (afstand / 100) * verbruik;
+			var prijsreis = totverb * prijsPL;
+			//Uitvoer
+			document.write("Het zal " +prijsreis+ " euro kosten.");
+		</script>
+	</body>
+</html>

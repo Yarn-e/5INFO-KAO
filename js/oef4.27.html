@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Yarn</title>
+		<meta name="description" content="Yarne Decuyper">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<script>
+			//Gegeven
+			var fiets = 0;
+			var auto = 25;
+			var autoc = 38;
+			var vracht = 2;
+			//Invoer
+			var voertuig = prompt('Geef een voertuig in met de letter u?\nF=Fiets\nB=Bromfiets\nA=Auto\nC=Auto met caravan\nV=Vrachtwagen','').toUpperCase();
+			//Verwerking
+			 switch (voertuig) {
+					 case "F" : document.write(fiets);
+					 
+					 case "B" : document.write(fiets);
+					 						break;
+					 case "A" : document.write(auto);
+					 						break;
+					 case "C" : document.write(autoc);
+					 						break;
+					 case "V" : var ton =parseInt(prompt('Aantal Ton',''));
+					 						var prijs = ton * vracht;
+											document.write(prijs);
+					 						break;
+					 default : 	document.write('Fout voertuig') 
+					 						break;
+			 }
+		</script>
+	</body>
+</html>

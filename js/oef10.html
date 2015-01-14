@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Oef 2.10</title>
+		<meta name="description" content="Decuyper Yarne">
+		<style>
+			table, td, th {
+				border: 1px solid black;
+			}
+			th {
+				text-align: left;
+			}
+			caption {
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			var Prijs = parseFloat(prompt("Geef je eenheidsprijs in",""));
+			var aantal = parseInt(prompt("Geef je aantal producten in",""));
+			var BTW = 0.06;
+			var PrijsExBTW = Prijs * aantal;
+			var btw = PrijsExBTW * BTW;
+			var totaal = btw + PrijsExBTW;
+			document.write("<table><caption>Berekening</caption><tr><th>Aantal stuks:</th><td>" + aantal +"</td></tr>");
+			document.write("<tr><th>Eenheidsprijs:</th><td>" + Prijs + " &euro;</td></tr>");
+			document.write("<tr><th>Totaal excl. BTW:</th><td> " + PrijsExBTW + " &euro;</td></tr>");
+			document.write("<tr><th>6% BTW:</th><td> " + btw + " &euro;</td></tr>");
+			document.write("<tr><th>De prijs inclusief BTW is:</th><td> " + totaal + " &euro;</td></tr></table>");
+		</script>
+	</body>
+</html>

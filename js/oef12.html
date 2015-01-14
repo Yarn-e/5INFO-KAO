@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Oef 2.12</title>
+		<meta name="description" content="Decuyper Yarne">
+		<style>
+			table, td {
+				border: 1px solid black;
+			}
+			caption {
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			//Gegeven
+			var Prijs = 0.13;
+			var BTW = 0.21;
+			var Gratis = 100;
+			var Gratislid = 100;
+			//Invoer
+			var verbKwh = parseInt(prompt("Geef je verbruik van je Kwh in",""));
+			var aantalGezin = parseInt(prompt("Geef de groote van je gezin in",""));
+			//Verwerking
+			var GratisKwh = Gratis + (Gratislid * aantalGezin);
+			var Kwh = verbKwh - GratisKwh;
+			var ExBTWKwh = Kwh * Prijs;
+			var BetBTW = ExBTWKwh * BTW;
+			var bet = BetBTW * ExBTWKwh;
+			//Uitvoer
+			document.write("<table><caption>Elektriciteitsrekening</caption><tr><td>Verbruikt kWh:</td><td>" + verbKwh +"</td></tr>");
+			document.write("<tr><td>Gratis kWh:</td><td>" + GratisKwh +"</td></tr>");
+			document.write("<tr><td>Te verekenen kWh:</td><td>" + Kwh + "</td></tr>");
+			document.write("<tr><td>Te betalen <u>exl</ul> BTW:</td><td>" + ExBTWKwh + "</td></tr>");
+			document.write("<tr><td>BTW:</td><td>" + BetBTW + "</td></tr>");
+			document.write("<tr><td>Te betalen <u>inc</u> BTW</td><td>" + bet + "</td></tr></table>");
+		</script>
+	</body>
+</html>

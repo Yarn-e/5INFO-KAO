@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Oef 3.22</title>
+		<meta name="description" content="Decuyper Yarne">
+    <style>
+      #cent {
+        margin: 0 auto;
+        width: 700px;
+        text-align: left;
+      }
+      #lefty {
+        float: left;
+      }
+      h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 40px;
+      }
+      h2 {
+        text-transform: uppercase;
+      }
+    </style>
+	</head>
+	<body>
+    <div id="cent">
+		<script>
+    //Gegeven
+      var basiskost = 7.75;
+      var extrakost = 2.55;
+      var vastekost = 2.75;
+      var winstmarge = 1.5;
+      var BTW = 1.06;
+    //Invoer
+      var voornaam = prompt('Geef uw voornaam in','');
+      var grotepiz = parseInt(prompt('Hoe groot moet uw pizza zijn ? (in cm)',''));
+      var toppings = parseInt(prompt('Hoeveel extra toppings moet uw hebben ?',''));
+    //Verwerking
+      var diameter = grotepiz / 100;
+      
+      var opp = (Math.PI * diameter * diameter)/4;
+      
+      var kost = vastekost + (basiskost * opp) + (toppings * extrakost * opp);
+      
+      var verkoopprijs = Math.round(100 * (kost * winstmarge * BTW)) /100;
+    //Uitvoer
+      //UitvoerImg
+      document.write('<img id="lefty" src="img_oef3.22/img.jpg">');
+      //UitvoerInfo
+      document.write('<h1>Pizza Kost Programma</h1>');
+      document.write('<br><h2>Bestelling</h2>');
+      //UitvoerVar
+      document.write('Op naam van : <b>' + voornaam + '</b>');
+      document.write('<br>Diameter pizza :' + grotepiz + ' cm');
+      document.write('<br>Aantal extra toppings : ' + toppings);
+      document.write('<br><br>De prijs van de pizza is : <b>' + verkoopprijs + ' &euro;</b>');
+		</script>
+      </div>
+	</body>
+</html>

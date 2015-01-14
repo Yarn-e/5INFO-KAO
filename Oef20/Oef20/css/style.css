@@ -1,0 +1,366 @@
+/* RESET ******************************************************************/
+
+
+html, body, div, span, applet, object, iframe, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+
+/* CONTENT ******************************************************************/
+
+li {
+	margin-left: 2em;
+}
+ .container ol, .container ul {
+  list-style: none;
+}
+p{
+	font-size: 14px;
+	color: #FFF
+}
+body.front {
+  font: 13px/18px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: black url(../img/Are-Arctic-Monkeys-the-Saviours-of-Rock%E2%80%99n%E2%80%99Roll.jpg) no-repeat  center 56px;
+}
+body{
+	font: 13px/18px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  color: #404040;
+  background: black url(../img/patrn.jpg);
+}
+footer.norm {
+	text-align: center;
+	font-size: 14px;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+footer.alb {
+	text-align: center;
+	font-size: 14px;
+	width: 100%
+}
+h1,h2{
+	text-align: center;
+	color: black;
+}
+}
+hr{
+	width: 95%;
+	background-image: -webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.75), rgba(255,255,255,0)); 
+	background-image: -moz-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.75), rgba(255,255,255,0)); 
+	background-image: -ms-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.75), rgba(255,255,255,0)); 
+	background-image: -o-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.75), rgba(255,255,255,0)); 
+}
+.container1 {
+	width: 960px;
+	margin: 80px auto;
+}
+#start {
+	background-color: rgba(255,255,255,0.7);
+}
+#top, #top2 {
+	height: 200px;
+}
+#top h1, #top h1 {
+	font-size: 40px;
+}
+div.col4 a {
+	text-decoration: none;
+	color: black;
+}
+div.col4 a:hover {
+	color: white;
+}
+.col-wrapper {
+	padding: 10px;
+	margin: 5px;
+	font-size: 14px;
+}
+.col-wrapper h2  {
+	font-size: 30px;
+	border-bottom: 10px solid black;
+	padding-bottom: 10px;
+	text-align: left;
+}
+.audio-player h3 {
+	font-size: 20px;
+	padding-left: 20px;
+	text-align: center;
+}
+.wrapper {
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 650px;
+}
+#imgmap {
+	width: 1080px;
+	margin: 10px auto;
+}
+.wrapor {
+	width: 350px;
+	margin: 0 auto;
+	line-height: normal;
+}
+iframe {
+	width: 400px;
+	height: 357px;
+	border: 1px solid white;
+	border-radius: 3px;
+}
+.audio-player object {
+	padding-left: 200px;
+}
+.audio-player object object {
+	padding: 0;
+}
+ul.album-list li{
+	list-style: none;
+	padding: 1em;
+}
+.content {
+	width: 808px;
+	background-color: rgba(255,255,255,0.7);
+	margin: 0 auto;
+}
+.content2 {
+	width: 808px;
+	margin: 0 auto;
+}
+fieldset{
+	width: 700px;
+	margin: 0 auto;
+	color: #222;
+	background-color: rgba(255,255,255,0.7) ;
+	border: 1px solid black;	
+}
+label{
+	position: relative;
+	clear: both;
+	float: left;
+	width: 200px;
+	margin-right: 5px;
+	text-align: right;
+	line-height: 1.3em;
+	color: #333;
+	font-weight: bold;
+}
+.cent{
+	text-align: center;
+}
+p{
+	color: grey;
+}
+
+#top1 {
+	height: 100px;
+}
+#top2 {
+	height: 200px;
+}
+#top2 h1 {
+	font-size: 40px;
+}
+
+
+/* NAV ********************************************************************/
+
+
+header {
+  padding-top: 20px;
+  background: #3d4144 url("../img/bg.png") 0 0 repeat;
+}
+.container {
+  margin: 0 auto;
+  width: 540px;
+}
+
+nav {
+  height: 36px;
+  background: #464b4c;
+  border-top: 1px solid #353939;
+  border-bottom: 1px solid #2e3131;
+  background-image: -webkit-linear-gradient(top, #464b4c, #3f4344);
+  background-image: -moz-linear-gradient(top, #464b4c, #3f4344);
+  background-image: -o-linear-gradient(top, #464b4c, #3f4344);
+  background-image: linear-gradient(to bottom, #464b4c, #3f4344);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+}
+nav a {
+  -webkit-transition: 0.1s ease-out;
+  -moz-transition: 0.1s ease-out;
+  -o-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+  -webkit-transition-property: background-color, line-height;
+  -moz-transition-property: background-color, line-height;
+  -o-transition-property: background-color, line-height;
+  transition-property: background-color, line-height;
+}
+nav ul {
+  float: left;
+  border-left: 1px solid #353939;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid #4d5354;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+nav li {
+  float: left;
+	margin: 0;
+}
+nav a {
+  display: block;
+  padding: 0 20px;
+  line-height: 36px;
+  color: #ddd;
+  text-decoration: none;
+  text-shadow: 0 -1px #2e3131;
+  border-left: 1px solid #4d5354;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  border-right: 1px solid #353939;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+nav a:hover {
+  background: #4d5354;
+  background: rgba(255, 255, 255, 0.05);
+}
+nav li.active-blue a, nav li.active-blue a:hover, nav a:active {
+  padding: 0 21px;
+  line-height: 33px;
+  color: #eee;
+  background: #323637;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 3px solid #48a9c0;
+  background-image: -webkit-linear-gradient(top, #484e4f, #323637);
+  background-image: -moz-linear-gradient(top, #484e4f, #323637);
+  background-image: -o-linear-gradient(top, #484e4f, #323637);
+  background-image: linear-gradient(to bottom, #484e4f, #323637);
+  -webkit-box-shadow: inset 0 -1px #151717, inset 0 -1px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -1px #151717, inset 0 -1px 8px rgba(0, 0, 0, 0.2);
+}
+nav li.active-green a, nav li.active-green a:hover, nav a:active {
+  padding: 0 21px;
+  line-height: 33px;
+  color: #eee;
+  background: #323637;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 3px solid #56c93d;
+  background-image: -webkit-linear-gradient(top, #484e4f, #323637);
+  background-image: -moz-linear-gradient(top, #484e4f, #323637);
+  background-image: -o-linear-gradient(top, #484e4f, #323637);
+  background-image: linear-gradient(to bottom, #484e4f, #323637);
+  -webkit-box-shadow: inset 0 -1px #151717, inset 0 -1px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -1px #151717, inset 0 -1px 8px rgba(0, 0, 0, 0.2);
+}
+nav li.active-red a, nav li.active-red a:hover, nav a:active {
+  padding: 0 21px;
+  line-height: 33px;
+  color: #eee;
+  background: #323637;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 3px solid #a54e49;
+  background-image: -webkit-linear-gradient(top, #484e4f, #323637);
+  background-image: -moz-linear-gradient(top, #484e4f, #323637);
+  background-image: -o-linear-gradient(top, #484e4f, #323637);
+  background-image: linear-gradient(to bottom, #484e4f, #323637);
+  -webkit-box-shadow: inset 0 -1px #151717, inset 0 -1px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -1px #151717, inset 0 -1px 8px rgba(0, 0, 0, 0.2);
+}
+nav li.active-purple a, nav li.active-purple a:hover, nav a:active {
+  padding: 0 21px;
+  line-height: 33px;
+  color: #eee;
+  background: #323637;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 3px solid #c052b9;
+  background-image: -webkit-linear-gradient(top, #484e4f, #323637);
+  background-image: -moz-linear-gradient(top, #484e4f, #323637);
+  background-image: -o-linear-gradient(top, #484e4f, #323637);
+  background-image: linear-gradient(to bottom, #484e4f, #323637);
+  -webkit-box-shadow: inset 0 -1px #151717, inset 0 -1px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -1px #151717, inset 0 -1px 8px rgba(0, 0, 0, 0.2);
+}
+nav li.active-yellow a, nav li.active-yellow a:hover, nav a:active {
+  padding: 0 21px;
+  line-height: 33px;
+  color: #eee;
+  background: #323637;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 3px solid #c0bb30;
+  background-image: -webkit-linear-gradient(top, #484e4f, #323637);
+  background-image: -moz-linear-gradient(top, #484e4f, #323637);
+  background-image: -o-linear-gradient(top, #484e4f, #323637);
+  background-image: linear-gradient(to bottom, #484e4f, #323637);
+  -webkit-box-shadow: inset 0 -1px #151717, inset 0 -1px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -1px #151717, inset 0 -1px 8px rgba(0, 0, 0, 0.2);
+}
+nav li.green a, nav li.green a:active {
+  border-bottom-color: #56c93d;
+}
+nav li.red a, nav li.red a:active {
+  border-bottom-color: #a54e49;
+}
+nav li.purple a, nav li.purple a:active {
+  border-bottom-color: #c052b9;
+}
+nav li.yellow a, nav li.yellow a:active {
+  border-bottom-color: #c0bb30;
+}
+nav li.yellow a, nav li.blue a:active {
+  border-bottom-color: #48a9c0;
+}
+
+/* CONCERT LIST + NEWS LIST ******************************************************/
+ul.concert-list,
+ul.concert-list li,
+ul.news-list,
+ul.news-list li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul.concert-list li,
+ul.news-list li{
+	padding-bottom: 20px;
+}
+.concert-list h3.title,
+.news-list h3.title{
+	font-size: 20px;
+	text-align: left;
+	margin-bottom: 5px;
+}
+.concert-list h3.date,
+.news-list h3.date{
+	color: #666;
+}
+.concert-list h3.location {
+	color: #666;
+}

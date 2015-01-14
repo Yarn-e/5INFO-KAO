@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Oef2.8</title>
+		<meta name="description" content="Decuyper Yarne">
+		<style>
+			h1 {
+				text-align: center;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<script>
+			//Je kan de afstand berekenen met input van de gebruiker
+			
+			var Snelheid = parseInt(prompt("Geef de snelheid in",""));
+			var Afstand = parseInt(prompt("Geef de afstand in",""));
+			var Plaats1 = prompt("Geef de startplaats in","");
+			var Plaats2 = prompt("Geef de eindbestemming in","");
+			var KmPerMin = Snelheid / 60;
+			var AtMin = Afstand / KmPerMin;
+			//Script
+			
+			document.write("<h1>Vanaf " + Plaats1 + " doet de TGV er " + AtMin + " minuten over naar " + Plaats2 + ".</h1>");
+			
+		</script>
+	</body>
+	
+</html>

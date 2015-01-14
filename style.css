@@ -31,21 +31,25 @@ li {
 	margin: auto;
 	background-color: rgba(235, 235, 235, 0.8);
 }
-.right {
+.right, .rightlong {
 	float: left;
 	border-right: grey;
 	width: 310px;
 	padding: 5px;
 	margin: 4px;
-	height: 700px;
 }
-.left {
+.left, .leftlong {
 	float: left;
 	width: 310px;
 	padding: 5px;
 	margin: 4px;
 	border-right: 1px solid grey;
-	height: 700px;
+}
+.right , .left {
+  height: 700px;
+}
+.rightlong , .leftlong {
+  height: 800px;
 }
 header h1 {
 	text-align: center;

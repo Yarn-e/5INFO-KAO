@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+	<title>Index</title>
+	<meta name="author" content="Yarne Decuyper">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+	<link href="favicon.ico" rel="icon" type="image/x-icon">
+</head>
+<body id="frame2">
+<form action="mailto:zoomsxl@gmail.com?subject:recepten">
+	<fieldset>
+	<legend><h1>Kleine vragenlijst</h1></legend>
+			<p>
+				<label for="naam">Naam :</label>
+				<input type="text" id="naam" name="naam" placeholder="Vul hier je naam in" required>	
+			</p>
+			<p>
+				<label for="email">E-mailadres :</label>
+				<input type="text" id="email" name="email" placeholder="Vul hier je e-mail in" required>
+			</p>
+			<p>
+				<label>Ik heb al recepten van deze site uitgeprobeerd?</label>
+				<input type="radio" name="prob" value="Ja" checked required>Ja &nbsp;
+				<input type="radio" name="prob" value="Nee" required>Nee
+			</p>
+			<p>
+				<label>Ik vond deze recepten met de gegeven beschrijving...</label>
+				<select name="besch" id="besch" multiple required>
+					<option value="gemakkelijk">Gemakkelijk te maken </option>
+					<option value="niet altijd gemakkelijk">Niet altijd gemakkelijk te maken </option>
+					<option value="moelijk">Moeilijk te maken </option>
+				</select>
+			</p>
+			<p>
+				<label>Ik vond de gemaakte gerechten ...</label>
+				<select name="vond" id="vond" multiple required>
+					<option value="lekker">Lekker</option>
+					<option value="Redelijk lekker">Redelijk lekker</option>
+					<option value="Niet mijn smaak">Niet mijn smaak</option>
+				</select>
+			</p>
+			<p>
+			<label for="voorkeur">Mijn voorkeur gaat uit naar de keuken van ...</label>
+				<select name="voorkeur" id="voorkeur">
+					<option>Kies je Land</option>
+					<option value="België">Belgi&euml;</option>
+					<option value="Frankrijk">Frankrijk</option>
+					<option value="Italië">Italië</option>
+					<option value="China">China</option>
+					<option value="Thailand">Thailand</option>
+					<option value="Japan">Japan</option>
+					<option value="Mexico">Mexico</option>
+				</select>
+			</p>
+				<h3 class="cent">Bedankt voor het invullen!</h3>
+			<p class="cent">
+				<input type="submit" value="Verzenden"> &nbsp; &nbsp;
+				<input type="reset" value="Reseten">
+			</p>
+	</fieldset>	
+</form>
+
+
+</body>
+</html>

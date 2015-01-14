@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Oef 3.20</title>
+		<meta name="description" content="Decuyper Yarne">
+	</head>
+	<body>
+    <div id="cent">
+		<script>
+      
+    //Invoer
+      var dagen = parseInt(prompt('Geef het aantal dagen in',''));
+      var uur = parseInt(prompt('Geef het aantal uren in',''));
+      var minuten = parseInt(prompt('Geef het aantal minuten in',''));
+      var seconden = parseInt(prompt('Geef het aantal seconden in',''));
+    //Verwerking
+      var dagensec = dagen * 86400;
+      var uursec = uur * 3600;
+      var minutensec = minuten * 60;
+      var totsec = dagensec + uursec + minutensec + seconden;
+    //Uitvoer
+      document.write('Er zijn ' + totsec +' seconden in totaal');
+		</script>
+      </div>
+	</body>
+</html>
