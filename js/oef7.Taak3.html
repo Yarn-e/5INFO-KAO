@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Taak</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <style>
+      table,td {
+        border: 1px solid black;
+      }
+      table {
+        margin: 0 auto;
+      }
+      #red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <script>
+        function gramber() {
+          var gram = formul.getal.value;
+          formul.gramtxt.value = gram;
+          if (gram <=100) {
+            formul.bedrag.value = 1.18;
+            formul.nrpost.value = 2;
+          } else if (gram <=350) {
+            formul.bedrag.value = 1.77;
+            formul.nrpost.value = 3;
+          } else if (gram <=1000) {
+            formul.bedrag.value = 2.95;
+            formul.nrpost.value = 5;
+          } else if (gram <=2000) {
+            formul.bedrag.value = 4.13;
+            formul.nrpost.value = 7;
+          } else {
+            alert('Gebruik taxipost !')
+          }
+        }
+      </script>
+      <form id="formul">
+        <table>
+          <tr>
+            <td>
+              <img src="img_oef7.taak3/logo_bpost.jpg" alt="logo"><br>
+              Hoeveel weegt je zending in grammen ?
+              <input name="getal" id="getal" type="text">Gram
+              <p id="red">(opgelet enkel zendingen tot max 2kg (2000 gram)</p>
+              <input name="button" id="button" type="button" value="Bereken" onclick="gramber()">
+            </td>
+            <td>
+              <img src="img_oef7.taak3/post2.jpg" alt="2">
+              <img src="img_oef7.taak3/post3.jpg" alt="3"><br>
+              <img src="img_oef7.taak3/post5.jpg" alt="5">
+              <img src="img_oef7.taak3/post7.jpg" alt="7">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+            <p>Een zendig van <input name="gramtxt" id="gramtxt" type="text">gram<br>
+               zal je <input name="bedrag" id="bedrag" type="text"> &euro; kosten<br>
+               Je hebt postzegel nummer<input name="nrpost" id="nrpost" type="text">nodig
+            </td>
+          </tr>
+        </table> 
+      </form>  
+    </div>
+  </body>
+</html>

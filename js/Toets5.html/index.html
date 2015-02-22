@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Toets5</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='../css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        margin: 0 auto;
+      }
+      caption {
+        font-weight: bold;
+        font-size: 37px;
+      }
+      input {
+        width: 200px;
+      }
+    </style>
+    <script>
+      function preload() {
+        for (var i = 1;i <= preload.arguments.length;i++) {
+          preload[i] = new Image();
+          preload[i].src = 'img/' + preload.arguments.value + '.gif'
+        }
+      }
+      function ToonSport() {
+        var lgt = sport.lengte.value;
+        var gwt = sport.gewicht.value;
+        var nr = sport.geslacht.selectedIndex;
+        if (nr == 0) {
+          if (lgt < 180) {
+            if (gwt < 80) {
+              sport.uitk.value = "Voetbal";
+              sport.foto.src = "img/voetbal.gif";
+            } else {
+              sport.uitk.value = "Worstelen";
+              sport.foto.src = "img/worstelen.gif";
+            }
+          } else {
+            if (gwt < 80) {
+              sport.uitk.value = "Basketbal";
+                sport.foto.src = "img/basket.gif";
+            } else {
+              sport.uitk.value = "Boksen";
+                sport.foto.src = "img/boksen.gif";
+            }
+          }
+        } else {
+          if (lgt < 180) {
+            if (gwt < 80) {
+              sport.uitk.value = "Paardrijden";
+              sport.foto.src = "img/paardrijden.gif";
+            } else {
+              sport.uitk.value = "Tennis";
+              sport.foto.src = "img/tennis.gif";
+            }
+          } else {
+            sport.uitk.value = "Atletiek";
+            sport.foto.src = "img/atletiek.gif";
+        }
+      }
+      sport.lengte.value = "";
+      sport.gewicht.value = "";
+    }
+    </script>
+  </head>
+  <body onload="preload('atletiek', 'basket', 'boksen', 'paardrijden', 'sport', 'tennis', 'voetbal', 'worstelen')">
+    <form id="sport">
+    <div class="container">
+      <table>
+        <caption>Welke sport beoefenen ?</caption>
+        <tr>
+          <th>
+            Lengte
+          </th>
+          <td>
+            <input id="lengte" name="lengte" type="text">
+          </td>
+          <td rowspan="3"><img id="foto" src="img/sport.gif"></td>
+        </tr>
+        <tr>
+          <th>
+            Gewicht
+          </th>
+          <td>
+            <input id="gewicht" name="gewicht" type="text">
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Geslacht
+          </th>
+          <td>
+            <select id="geslacht" name="geslacht">
+              <option>Man</option>
+              <option>Vrouw</option>              
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>
+            <input id="btn" name="btn" type="button" value="Welke sport voor mij ?" onclick="ToonSport()">
+          </td>
+          <td>
+            <input id="uitk" name="uitk" type="text">
+          </td>
+        </tr>
+      </table>
+    </div>
+    </form>  
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Toets 4</title>
+    <meta name="author" content="Decuyper Yarne 5INFO">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+  </head>
+  
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+  <body>
+    <script>
+      //Programma voor berekening verzameld geld
+      //22/01/2015
+      
+      //Var voor loop
+      var gem = 0;
+      var som25 = 0;
+      var som2550 = 0;
+      var som50 = 0;
+      var geldsom = 1;
+      var groeptal = 0;
+      var groep = 0;
+      
+      //Start loop
+      while (geldsom != 0) {
+         groeptal++
+        //Start IF structuur
+        
+        if (geldsom < 25) {
+          som25++;
+          } else if (geldsom >= 25 && geldsom <= 50) {
+            som2550++;
+          } else {
+            som50++;
+        }
+        //Eind IF structuur
+        
+        //Totaalsom berekenen
+        gem = gem + geldsom;
+        geldsom = parseInt(prompt('Hoeveel heeft groep ' + groeptal + ' ingezameld ?\n 0 om te stoppen',''));
+        groep++
+      }
+      groep--
+      //Eind loop
+      
+      //Gemiddelde berekenen
+      var gemtot = Math.round((gem / groep) * 100) / 100;
+      
+      //Alles drukken op het scherm
+      document.write('<h1>Jeugdbeweging Hupsakee<br>Inzamelactie januari 2015</h1>');
+      document.write('Aantal groepen : ' + groep);
+      document.write('<br>Totaal ingezameld geld : ' + gem + ' &euro;');
+      document.write('<br>Gemiddeld per groep : ' + gemtot + ' &euro;');
+      document.write('<hr>');
+      document.write('<i><u>Statistiek</u>:');
+      document.write('<br>Aantal groepen met ...</i>');
+      document.write('<ul><li>Minder dan 25 &euro; : ' + som25 + '</li>');
+      document.write('<li>tss 25 en 50 &euro; : ' + som2550 + '</li>');
+      document.write('<li>Meer dan 50 &euro; : ' + som50 + '</li></ul>');
+    </script>
+  </body>
+</html>

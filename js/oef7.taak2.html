@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>7.49</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        background: null; 
+      }
+    </style>
+    <script>
+      //Array voor fruit
+      var fotos = new Array();
+      fotos[0] = "img_oef7.taak/winter.jpg";
+      fotos[1] = "img_oef7.taak/lente.jpg";
+      fotos[2] = "img_oef7.taak/zomer.jpg";
+      fotos[3] = "img_oef7.taak/herfst.jpg";
+      
+      var datum = new Date();
+      
+      var d = datum.getDate();
+      var m = datum.getMonth() + 1;
+      
+      var s;
+      
+      if (m>=1 && m<=3) s=0;
+      if (m==3 && d>19) s=1;
+      if (m>3 && m<=6) s=1;
+      if (m==6 && d>20) s=2;
+      if (m>6 && m<=9) s=2;
+      if (m==9 && d>20) s=3;
+      if (m>9 && m<=12) s=3;
+      if (m==12 && d>20) s=0;
+      
+      document.body.background=fotos[s];
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      
+    </div>
+  </body>
+</html>

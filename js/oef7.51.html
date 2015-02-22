@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>7.50</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <script>
+        function nummer() {
+          var nmr = formul.btw.value;
+          var fullnr = parseInt(nmr.substr(0,3) + nmr.substr(4,3) + nmr.substr(8,1));
+          var lastnr = parseInt(nmr.substr(9,10));
+          
+          var del = fullnr % 97;
+          
+          if (del == (97 - lastnr)) {
+                alert("het btwnummer is juist");
+              } else {
+                alert("het btwnummer is fout");
+              }    
+        }
+      </script>
+      <form id="formul">
+        Voer een btwnummer in (bijvoorbeeld 477-567-325)<input name="btw" id="btw" type="text">&nbsp;<br>
+        <input name="button" id="button" type="button" value="controleer" onclick="nummer()">
+        </div>  
+        <br id="clearboth">
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+.container {
+  margin: 0 auto;
+  width: 960px;
+  background-color: rgb(78, 125, 68);
+  text-align: center;
+  border: 2px solid rgb(50, 100, 40);
+  border-radius: 10px;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  /* USE THIS IN HTML ! 
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  */
+  background-color: #F1F1F1
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>bank</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='../css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <style>
+      table, td {
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      //Array voor fruit
+      var bank = new Array();
+      function preload() {
+        for (var i = 0; i <= preload.arguments.length;i++) {
+          bank[i] = new Image();
+          bank[i].src = 'img/' + preload.arguments[i] + '.gif';
+        }
+      }
+      function bank_img() {
+        var nr = bunk.choice.selectedIndex; //Nummer van de dropbox
+        bunk.foto.src = bank[nr].src;
+      }
+      function prijs() {
+        var nr = bunk.choice.selectedIndex;
+        switch (nr) {
+            case 0 :
+              bunk.vis.value = "";
+              bunk.mae.value = "";
+            break;
+            case 1 :
+              bunk.vis.value = 10;
+              bunk.mae.value = 0;
+            break;
+            case 2 :
+              bunk.vis.value = 15;
+              bunk.mae.value = 0;
+            break;
+            case 3 :
+              bunk.vis.value = 25;
+              bunk.mae.value = 10;
+            break;
+            case 4 :
+              bunk.vis.value = 20;
+              bunk.mae.value = 20;
+            break;
+            case 5 :
+              bunk.vis.value = 15;
+              bunk.mae.value = 10;
+            break;
+        }
+      }
+    </script>
+  </head>
+  <body onload="preload('pijl','argenta','bnp','dexia','ing','kbc')">
+    <div class="container">
+    <form id="bunk">  
+    <table>
+    <tr>
+      <td rowspan="4">
+        <img src="img/VISA-maestro.jpg">
+      </td>
+      <td colspan="2"><h1 id="left">Kies uw bank en<br>zie welke kosten de kaarten hebben</h1></td>
+    </tr>
+    <tr>
+      <td>
+        <select name="choice" onchange="bank_img()" size="6">
+          <option>kies een bank</option>
+          <option>argenta</option>
+          <option>bnp</option>
+          <option>dexia</option>
+          <option>ing</option>
+          <option>kbc</option>
+        </select>
+      </td>
+      <td>
+        <img name="foto" src="img/pijl.gif">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      <input type="button" value="Toon kosten" onclick="prijs()">  
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <b>VISA-Kaart<input name="vis" id="vis" type="text"><br>
+        Maestro-Kaart<input name="mae" id="mae" type="text"></b>
+      </td>  
+    </tr>  
+    </table>
+    </form>  
+    </div>
+  </body>
+</html>

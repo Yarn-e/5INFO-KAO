@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>5.33</title>
+    <meta name="description" content="Decuyper Yarne">
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <script>
+    //Invoer
+      var leerlingen = parseInt(prompt('Geef alle leerlingen in',''));
+    //Verwerking
+      var gemiddeld = 0;
+      for (var herh = 1 ; herh <= leerlingen ; herh++) {
+        var lln = parseFloat(prompt('Geef de groote in van een leerling \n(In meter)',''))
+         gemiddeld = gemiddeld + lln                     
+      }
+      
+      var totgem = Math.round((gemiddeld / leerlingen)*100)/100;
+      document.write('De gemiddlede groote van de leerlingen is : ' + totgem);                       
+    </script>
+  </body>
+</html>

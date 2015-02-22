@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>5.41</title>
+    <meta name="description" content="Decuyper Yarne">
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <style>
+      #rood {
+        color: red;
+      }
+      #groen {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+    //Verwerking
+      for (var jaar = 2000; jaar <= 2500; jaar++) {
+        if (((jaar % 4) == 0) && ((jaar % 100) != 0)) {
+            document.write('<b id ="groen">' + jaar + ' Is een schrikkeljaar</b><br>');
+        } else if ((jaar % 400) == 0 ) {
+          document.write('<b id="rood">' + jaar + ' Is een schrikkeljaar</b><br>');
+          } else if ((jaar % 100) == 0) {
+          document.write('<b>' + jaar +' Is geen schrikkeljaar</b><br>');
+            } else {
+          document.write(jaar +' Is geen schrikkeljaar<br>');
+        } 
+      }
+    </script>
+  </body>
+</html>

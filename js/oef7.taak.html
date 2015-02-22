@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>7.49</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <script>
+      //Array voor fruit
+      var fruitarray = new Array();
+      //Functie voor images in de array te preloaden
+      function preload() {
+        for (var i = 0; i <= preload.arguments.length;i++) {
+          fruitarray[i] = new Image();
+          fruitarray[i].src = 'img_oef7.taak/' + preload.arguments[i] + '.jpg';
+        }
+      }
+      function figuur_tonen() {
+        var nr = fruit.fruitkeuze.selectedIndex; //Nummer van de dropbox
+        fruit.foto.src = fruitarray[nr].src;
+      }
+    </script>
+  </head>
+  <body onload="preload('leeg','aardbei','appel','peer','banaan','kiwi','sinaasappel')">
+    <div class="container">
+      <form id="fruit">
+        <select name="fruitkeuze" onchange="figuur_tonen()">
+          <option>--kies een fruit--</option>
+          <option>Aardbeien</option>
+          <option>Appels</option>
+          <option>Peren</option>
+          <option>Bananen</option>
+          <option>Kiwi's</option>
+          <option>Sinaasappels</option>
+        </select>
+        <br>
+        <img name="foto" src="img_oef7.taak/leeg.jpg">
+      </form>
+    </div>
+  </body>
+</html>

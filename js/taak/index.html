@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>index</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='../css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <style>
+      table {
+        margin: 0 auto;
+      }
+    </style>
+    <script>
+      //Array aanmaken
+      var op = new Array();
+      var af = new Array();
+      
+      //Preloaden
+      op[1] = new Image();
+      op[1].src = "img/maestro2.jpg";
+      op[2] = new Image();
+      op[2].src = "img/VISA2.jpg";
+      
+      af[1] = new Image();
+      af[1].src = "img/maestro1.jpg";
+      af[2] = new Image();
+      af[2].src = "img/VISA1.jpg";
+      
+      function opaf(arraynr , kaart , hover) {
+        if (hover) {
+          document.images[kaart].src = op[arraynr].src;
+        } else {
+          document.images[kaart].src = af[arraynr].src;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <caption><b>VISA en Maestro kaart<br>ga met de muis over de kaart om de achterkant te zien</b></caption>
+        <tr>
+          <td>
+            <a href="banken.html"><img name="MAE" src="img/maestro1.jpg" onMouseOver="opaf(1,'MAE',true)" onMouseOut="opaf(1,'MAE',false)"></a>
+            <a href="banken.html"><img name="VIS" src="img/VISA1.jpg" onmouseover="opaf(2,'VIS',true)" onmouseout="opaf(2,'VIS',false)"></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

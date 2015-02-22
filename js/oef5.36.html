@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>5.36</title>
+    <meta name="description" content="Decuyper Yarne">
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <script>
+    //invoer
+      var boodschp = prompt('Geef uw boodschap in','').toUpperCase()
+    //Verwerking
+      var size = 1
+      for (var i = 0 ;i <boodschp.length; i++) {
+        document.write(boodschp.charAt(i).fontsize(size).bold());
+        if (size < 7) {
+          size++
+        } else {
+          size = 1
+        }
+      }                     
+    </script>
+  </body>
+</html>

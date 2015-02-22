@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>7.46</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <script>
+        function bereken(){
+            f.product.value = f.g1.value * f.g2.value;
+        }
+
+      </script>  
+      <h1>Toepassing DOM 0</h1>
+      <form id="f">
+        <table>
+          <tr>
+            <td>Getal 1: </td>
+            <td><input id="g1" type="text"></td>
+          </tr>
+          <tr>
+            <td>Getal 2: </td>
+            <td><input id="g2" type="text"></td>
+          </tr>
+          <tr>
+            <td>Product: </td>
+            <td>
+             <input id="product" type="text">
+            </td>
+            <td>
+             <input type="button" value="Maak product" onclick="bereken()">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

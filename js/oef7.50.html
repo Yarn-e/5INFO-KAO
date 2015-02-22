@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>7.50</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <style>
+      #rechts {
+        float: left;
+      }
+      #rechts img {
+        margin: 5px;
+      }
+      #clearboth {
+        clear: both;
+      }
+      #left {
+        margin: 0 auto;
+        width: 500px;
+        padding: 20px 0;
+      }
+      #left input {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <script>
+        function spel() {
+          var kg = formul.kogel.value;
+          var uitkomst = Math.round(Math.random() * 6);
+          if (uitkomst == kg) {
+            formul.foto.src = "img_oef7.50/rip.gif";
+          }
+        }
+      </script>
+      <form id="formul">
+        <div id="rechts">
+          <img src="img_oef7.50/roulette.jpg" id="foto">
+        </div>
+        <div id="left">
+        Hoeveel kogels steek je erin? (1-6)
+        <input name="kogel" id="kogel" type="text">&nbsp;<br>
+        <input name="button" id="button" type="button" value="Speel Roulette!" onclick="spel()">
+        </div>  
+        <br id="clearboth">
+      </form>
+    </div>
+  </body>
+</html>

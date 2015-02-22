@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Toets3</title>
+    <meta name="author" content="Decuyper Yarne 5INFO">
+  </head>
+  <body>
+    <script>
+      //Datums ophalen
+        var Datum = new Date();
+        var Dag = Datum.getDate();
+        var Maand = Datum.getMonth() + 1;
+        var Jaar = Datum.getFullYear();
+        var weekdag = Datum.getDay();
+      //Weekdag drukken
+        document.write('Het is vandaag ');
+      //Weekdag ophalen + drukken
+        switch (weekdag) {
+            case 0 : document.write('zondag<br>');
+                     break;
+            case 1 : document.write('maandag<br>');
+                     break;
+            case 2 : document.write('dinsdag<br>');
+                     break;
+            case 3 : document.write('woensdag<br>');
+                     break;
+            case 4 : document.write('donderdag<br>');
+                     break;
+            case 5 : document.write('vrijdag<br>');
+                     break;
+            case 6 : document.write('zaterdag<br>');
+                     break;
+        }
+      //Datum drukken
+        if (Dag <=9) {
+          Dag = "0" + Dag;
+        }
+        if (Maand <=9) {
+          Maand = "0" + Maand;
+        }
+        document.write(Dag + ' / ' + Maand + ' / ' + Jaar + '<br>');
+      //Vakantie berekenen + drukken
+        if (  (Dag == 1) && (Maand == 1) ) {
+          document.write('Nieuwjaar <br>');
+        }
+        if ( ( Dag >= 26 ) && ( Maand == 12 ) ) {
+          document.write('Kerstvakantie <br>');
+        } else if ( ( Dag <= 9 ) && ( Maand == 1 ) ) {
+          document.write('Kerstvakantie <br>');
+        }
+        if ( ( Dag >= 30 ) && ( Maand == 3 ) )  {
+          document.write('Paasvakantie <br>');
+        } else if (  ( ( Dag <= 14 )  ( Maand == 4 ) ) ) {
+          document.write('Paasvakantie <br>');
+        }
+    </script>
+  </body>
+</html>

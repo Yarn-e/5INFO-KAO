@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>5.40</title>
+    <meta name="description" content="Decuyper Yarne">
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <style>
+       table {
+        border: 1px solid black;
+      }
+      #rood {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+    //Verwerking
+      var antdel;
+      document.write('<table>');
+      document.write('<tr><th>Getal</th><th>Deelbaar door :</th><th>&nbsp</th>')
+      for (var getal = 1; getal <=50;getal++) {
+        antdel = 0
+        document.write('<tr><td>' + getal + '</td><td>');
+        for (var i = 1; i <= getal; i++) {
+          var del = getal % i;
+          if (del == 0) {
+             document.write(i +' ');
+             antdel++;
+          } 
+        }
+        if (antdel == 2) {
+            document.write('</td><td><b id="rood">Priemgetal !</b></td>');
+          } else { 
+            document.write('</td><td>&nbsp;</td>');
+          }
+          document.write('</tr>');
+      }
+      document.write('</table>');
+    </script>
+  </body>
+</html>

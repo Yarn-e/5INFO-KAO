@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+    <meta name="author" content="Yarne Decuyper">
+</head>
+<body>
+
+<script>
+  //Invoer
+  var vastwed = 743.68;
+  var procent = 12/100;
+  var naam;
+  var totwed = 0;
+  var gem = 0;
+  var aantwed = 0;
+  var exit ='';
+  //Start loop
+  while (exit != 'STOP') {
+    naam = prompt('Geef de naam van de vertegenwoordiger in \nschrijf stop in om te stoppen', '');
+    exit = naam.toUpperCase();
+    if (exit != 'STOP') {
+      //Berekenen + drukken als loop doorgaat
+      var omzet = parseFloat(prompt('Geef je omzet van de maand in', ''));
+      var wed = Math.round( 100 * (((procent) * omzet) + vastwed)) / 100;
+      totwed = totwed + wed;
+      aantwed++;
+
+      document.write('Verkoop vertegenwoordiger ' + naam + ' = ' + omzet + ' &euro;<br>');
+      document.write('Wedde : ' + wed + ' &euro;<br><hr>');
+      //Berekenen + drukken als de loop eindigd
+    } else if (exit == 'STOP') {
+      gem = Math.round( 100 * (totwed / aantwed)) / 100;
+      document.write('TOTAAL UIT TE BETALEN LOON : ' + totwed + '&euro;<br>');
+      document.write('Gemiddeld loon : ' + gem);
+    }
+  }
+  //Einde loop
+</script>
+
+</body>
+</html>

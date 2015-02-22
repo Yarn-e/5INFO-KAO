@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>6.45</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <script>
+        
+        function dobbel() {
+            return(Math.ceil(Math.random() * 6));    
+        }
+        function gooien() {
+            location.reload();    
+        }
+        
+    </script>
+    
+</head>
+<body>
+  <div class="container">
+    <script>
+      
+      //Invoer
+      
+      var aantal = parseInt(prompt('Hoeveel dobbelstenen wil je gooien?',''));
+      var gem = 0;
+      var aantalgooi = 0;
+      var gooi = 0;
+      var dub1 = 0;
+      var dub2 = 0;
+      var dub3 = 0;
+      var dub4 = 0;
+      var dub5 = 0;
+      var dub6 = 0;
+      var rij = 0;
+      //Drukken
+      
+      document.write('<h1>Dobbelen</h1>');
+      //Start loop
+      
+      for (var i=1; i<=aantal; i++) {
+        
+      //If voor kijken voor rij  
+        if (rij==10) {
+            document.write("<br>");
+            rij=0;
+        }
+        gooi = dobbel();
+        document.write('<img src="img_oef6.45/dobbel' + gooi + '.gif">');
+        aantalgooi += gooi;
+        rij++;
+        //Switch voor het aantal variaties 
+        
+        switch(gooi) {
+          case 1: dub1++;
+          break;
+          case 2: dub2++;
+          break;
+          case 3: dub3++;
+          break;
+          case 4: dub4++;
+          break;
+          case 5: dub5++;
+          break;
+          case 6: dub6++;
+          break;
+        }
+      }
+      //Alles drukken
+      
+      document.write('<br>_____________________________________________________<br>');
+      document.write('Totaal: ' + aantalgooi + '<br>');
+      gem = Math.round((aantalgooi / aantal) * 100) / 100;
+      document.write('Gemiddelde: ' + gem + '<br>');
+      document.write('Aantal keer 1: ' + dub1 + '<br>')
+      document.write('Aantal keer 2: ' + dub2 + '<br>')
+      document.write('Aantal keer 3: ' + dub3 + '<br>')
+      document.write('Aantal keer 4: ' + dub4 + '<br>')
+      document.write('Aantal keer 5: ' + dub5 + '<br>')
+      document.write('Aantal keer 6: ' + dub6 + '<br>')
+      document.write('<button onClick="gooien()">Nogmaals gooien</button>');
+
+        </script>
+    </div>
+</body>
+</html>

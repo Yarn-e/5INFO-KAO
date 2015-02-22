@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>5.38</title>
+    <meta name="description" content="Decuyper Yarne">
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <style>
+      table , td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+    //Verwerking
+      var getal = 1;
+      document.write('<table>');
+      for (var row = 1; row <=2;row++) {
+        document.write('<tr>');
+        for (var colom = 1; colom <=5; colom++) {
+          document.write('<td>');
+          for (var teller = 1; teller <=12; teller++) {
+            var uitk = getal * teller;
+            document.write(getal + ' x ' + teller + ' = ' + uitk + '<br>');
+          }
+          document.write('</td>');
+          getal++
+        }
+        document.write('</tr>');
+      }
+      document.write('</table>');
+    </script>
+  </body>
+</html>
