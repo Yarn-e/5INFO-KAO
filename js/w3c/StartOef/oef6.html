@@ -44,6 +44,7 @@
         horo = new getObj('IDHoro');
         chHoro = new getObj('IDChHoro');
         
+        
         vulJaar();
         vulMaand();
         vulDag();
@@ -87,8 +88,8 @@
       function vulDag() {
         dag.obj.innerHTML = '';
         var nuDag = Nu.getDate();
-        var maandKeuze = parseInt(maand.obj.options[maand.obj.selectedIndex].value);
-        var jaarKeuze = parseInt(jaar.obj.options[jaar.obj.selectedIndex].value);
+        var maandKeuze = gekozenMaand();
+        var jaarKeuze = gekozenJaar();
         var loopend;
         
         loopend = berekenDag(maandKeuze, jaarKeuze);
@@ -148,6 +149,81 @@
         return 28;
       }
       
+      /**
+       * Toon horoscoop wanneer knop is ingedrukt.
+       */
+      function toonHoroscoop() {
+      
+      }
+      
+      /**
+       * Bereken horoscoop op basis van geselecteerde dag en maand
+       *
+       * @param int maand
+       *   Geeft de gekozen maand mee.
+       * @param int dag
+       *   Geeft de gekozen dag mee.
+       *
+       * @return
+       *   Geeft de horoscoop terug.
+       */
+      function berekenHoroscoop(maand, dag) {
+        
+      }
+      
+      /**
+        * Toon Chinese horoscoop wanneer knop is ingedrukt. 
+        */
+      function toonChineseHoroscoop() {
+        
+      }
+      
+      /**
+       * Bereken Chinese horoscoop op basis van geslecteerde maand en jaar
+       *
+       * @param int jaar
+       *   Geeft het gekozen jaar mee.
+       * @param int maand
+       *   Geeft de gekozen maand mee.
+       *
+       * @return
+       *   Geeft de Chinese horoscoop terug.
+       */
+      function berekenChineseHoroscoop(jaar, maand) {
+        
+      }
+      
+      /**
+       * Haal gekozen jaar uit jaar select.
+       *
+       * @return int jaarKeuze
+       *   Geeft het gekozen jaar terug.
+       */
+      function gekozenJaar() {
+        var jaarKeuze = parseInt(jaar.obj.options[jaar.obj.selectedIndex].value)
+        return gekozenJaar;
+      }
+      /**
+       * Haal gekozen maand uit maand select.
+       *
+       * @return int maandKeuze
+       *   Geeft de gekozen maand terug.
+       */
+      function gekozenMaand() {
+        var maandKeuze = parseInt(maand.obj.options[maand.obj.selectedIndex].value);
+        return maandKeuze;
+      }
+      
+      /**
+       * Haal gekozen dag uit dag select.
+       *
+       * @return int dagKeuze
+       *   Geeft de gekozen dag terug.
+       */
+      function gekozenDag {
+        var dagKeuze = parseInt(dag.obj.options[dag.obj.selectedIndex].value);
+        return dagKeuze;
+      }
     </script>
   </head>
   <body onload="initieer()">
