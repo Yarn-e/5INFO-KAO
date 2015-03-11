@@ -28,90 +28,120 @@
       }
     </style>
     <script>
-      var Dag, Maand, Jaar, Btn, Horo, ChHoro;
+      var dag, maand, jaar, btn, horo, chHoro;
       var Nu = new Date();
+      var maandArray = new Array('Januari','Februari','Maart','April','Mei','Juni','Juli','Augustus','September','Oktober','November','December');
       
+      /**
+       * Initeerd de var's en de functies.
+       */
       function initieer() {
+        dag = new getObj('IDDag');
+        maand = new getObj('IDMaand');
+        jaar = new getObj('IDJaar');
+        btn = new getObj('IDbtn');
         
-        Dag = new getObj('IDDag');
-        Maand = new getObj('IDMaand');
-        Jaar = new getObj('IDJaar');
-        Btn = new getObj('IDbtn');
-        Horo = new getObj('IDHoro');
-        ChHoro = new getObj('IDChHoro');
-        VulJaar();
-        VulMaand();
-        VulDag();
-        Maand.obj.onchange = VulDag; 
-        Jaar.obj.onchange = VulDag; 
+        horo = new getObj('IDHoro');
+        chHoro = new getObj('IDChHoro');
+        
+        vulJaar();
+        vulMaand();
+        vulDag();
+        
+        maand.obj.onchange = vulDag; 
+        jaar.obj.onchange = vulDag;
       }
       
-      function VulJaar() {
-        
+      /**
+       * Vult 100 jaar in de select voor jaar.
+       */
+      function vulJaar() {
         var nujaar = Nu.getFullYear();
-        for (var i = 0;i <= 100;i++) {
-          var Jaarz = nujaar - i;
-          if (Jaarz == nujaar) {
-            Jaar.obj.innerHTML += '<option value="'+ Jaarz +'" selected>'+ Jaarz +'</option>';
-          } else {
-            Jaar.obj.innerHTML += '<option value="'+ Jaarz +'">'+ Jaarz +'</option>';
+        for (var i = 0; i <= 100; i++) {
+          var selected = '';
+          var jaarz = nujaar - i;
+          if (jaarz == nujaar) {
+            selected = 'selected';
           }
+          jaar.obj.innerHTML += '<option value="' + jaarz + '" ' + selected + '>' + jaarz + '</option>';
         }
       }
       
-      function VulMaand() {
-        
-        var maandary = new Array('Januari','Februari','Maart','April','Mei','Juni','Juli','Augustus','September','Oktober','November','December');
+      /**
+       * Vult de maanden in de select voor maanden.
+       */
+      function vulMaand() { 
         var nuMaand = Nu.getMonth();
-        for (var i = 0;i <= 11;i++) {
+        for (var i = 0; i <= 11; i++) {
+          var selected = '';
           if (i == nuMaand) {
-            Maand.obj.innerHTML += '<option value="'+ i +'" selected>'+ maandary[i] +'</option>';
-          } else {
-            Maand.obj.innerHTML += '<option value="'+ i +'">'+ maandary[i] +'</option>';
+            selected = 'selected';
           }
+          maand.obj.innerHTML += '<option value="' + i + '" ' + selected + '>' + maandArray[i] + '</option>';
         }
       }
       
-      function VulDag() {
-        Dag.obj.innerHTML = '';
+      /**
+       * Vult de dagen in de select voor dagen op basis van maandkeuze en jaar.
+       */
+      function vulDag() {
+        dag.obj.innerHTML = '';
         var nuDag = Nu.getDate();
-        var maandkeuze = parseInt(Maand.obj.options[Maand.obj.selectedIndex].value);
-        var Jaarkeuze = parseInt(Jaar.obj.options[Jaar.obj.selectedIndex].value);
+        var maandKeuze = parseInt(maand.obj.options[maand.obj.selectedIndex].value);
+        var jaarKeuze = parseInt(jaar.obj.options[jaar.obj.selectedIndex].value);
         var loopend;
-        switch(maandkeuze) {
-          case 0 : 
-          case 2 : 
-          case 4 : 
-          case 6 : 
-          case 8 : 
-          case 10 :
-            loopend = 31;
-          break;
-            
-          case 3 : 
-          case 5 : 
-          case 7 : 
-          case 8 : 
-          case 9 : 
-          case 11 :
-            loopend = 30;
-          break;
-            
-          case 1 :
-            loopend = Feb(Jaarkeuze);
-            
-          break;
-        }
-        for (var i = 1;i <= loopend;i++) {
+        
+        loopend = berekenDag(maandKeuze, jaarKeuze);
+        
+        for (var i = 1; i <= loopend; i++) {
+          var selected = '';
           if (i == nuDag) {
-            Dag.obj.innerHTML += '<option value="'+ i +'" selected>'+ i +'</option>';
-          } else {
-            Dag.obj.innerHTML += '<option value="'+ i +'">'+ i +'</option>';
+            selected = 'selected'
           }
+          
+          dag.obj.innerHTML += '<option value="' + i + '" ' + selected + '>' + i + '</option>';
         }
       }
-      function Feb(jaar) {
-        
+      
+      /**
+       * Bereken het aantal dagen op basis van de maand.
+       *
+       * @param int maand
+       *   De maand waarvoor het aantal dagen moet berekend worden.
+       * @param int jaar
+       *   Het jaar meegeven om te weten of het een shirkkeljaar meegeven.
+       * @return int
+       *   Geeft het aantal dagen mee dat moet gevuld worden.
+       */
+      function berekenDag(maand, jaar) {
+        switch(maand) {
+          case 1:
+            return berekenDagFeb(jaar);
+            break;
+            
+          case 3: 
+          case 5:  
+          case 8: 
+          case 10: 
+            return 30;
+            break;
+            
+          default:
+            return 31;
+            break;
+        }
+      }
+      
+      /**
+       * Bereken het aantal dagen in februari gebaseerd op het jaar.
+       * 
+       * @param int jaar
+       *   Het jaar om het aantal dagen op te berekenen.
+       *
+       * @return int
+       *   Het aantal dagen in februari van het gegeven jaar.
+       */
+      function berekenDagFeb(jaar) {
         if ((jaar % 4) == 0) {
           return 29;
         }
