@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>oef2</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='../../css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <script src="../getobj.js"></script>
+    <style>
+      #IDhoofdlijst {
+        width: 100px;
+        background-color: #CCF;
+        font-weight: bold;
+      }
+      #IDdetail {
+        width: 200px;
+        background-color: #CFC;
+        color: red;
+      }
+    </style>
+    <script>
+      var hoofd, detail;
+      var inhoud = new Array;
+      inhoud[0] = new Array('Krokus', 'Roos', 'Tulp');
+      inhoud[1] = new Array('Eik', 'Es', 'Populier');
+      inhoud[2] = new Array('Aap', 'Beer', 'Schaap');
+      function initieer() {
+        hoofd = new getObj('IDhoofdlijst');
+        detail = new getObj('IDdetail')
+        
+        hoofd.obj.onchange = vuldetail;
+        vuldetail();
+      }
+      
+      function vuldetail() {
+        var nr = hoofd.obj.selectedIndex;
+        detail.obj.options.length = 0;
+        for (var i=0; i < inhoud[nr].length;i++) {
+          detail.obj.options[i] = new Option(inhoud[nr][i]) ;
+        }
+        detail.obj.options[0].selected = true;
+      }
+    </script>
+  </head>
+  <body onload="initieer()">
+    <div class="container">
+      <h1>Dynamische keuzelijst</h1>
+      <select id="IDhoofdlijst" size="10">
+        <option selected>Bloemen</option>
+        <option>Bomen</option>
+        <option>Dieren</option>
+      </select>
+      <select id="IDdetail" size="10">
+      
+      </select>
+    </div>
+  </body>
+</html>

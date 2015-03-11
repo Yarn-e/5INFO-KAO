@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>oef3</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='../../css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <script src="../getobj.js"></script>
+    <style>
+      .left {
+        float: left
+      }
+      #IDlkr {
+        width: 200px;
+        background-color: #FFC;
+      }
+      #IDdln {
+        width: 200px;
+        background-color: #fc3;
+      }
+      .clearboth {
+        clear: both;
+      }
+    </style>
+    <script>
+      var lkr, dln;
+      
+      function initieer() {
+        lkr = new getObj("IDlkr");
+        dln = new getObj("IDdln");
+      }
+      
+      function doorgeef(van,naar) {
+        var vanlen = van.obj.options.length;
+        var naarlen;
+        for (var i = 0; i < vanlen;i++) {
+          if (van.obj.options[i].selected == true) {
+            naarlen = naar.obj.options.length;
+            naar.obj.options[naarlen] = new Option(van.obj.options[i].text);
+          }
+        }
+        
+        for (i = (vanlen-1); 1 >= 0;i++) {
+          if (van.obj.options[i].selected == true) {
+            van.obj.options[i] = null;
+          }
+        }
+      }
+      
+      
+      
+      
+      
+    </script>
+  </head>
+  <body onload="initieer()">
+    <div class="container">
+      <h1>Studiedag</h1>
+      <div class="left">
+        <select id="IDlkr" size="10" multiple>
+          <option>Yarne</option>
+          <option>Leander</option>
+          <option>Tim</option>
+          <option>Bram</option>
+          <option>Pepijn</option>
+          <option>Nick</option>
+          <option>Ahmed</option>
+          <option>Thibeau</option>
+        </select>
+      </div>
+      <div class="left">
+        <input type="button" onclick="doorgeef(lkr,dln)" value=">>">   
+        <br>
+        <input type="button" onclick="doorgeef(dln,lkr)" value="<<">   
+      </div>
+      <div class="left">
+      <select id="IDdln" size="10" multiple> 
+      
+      </select>
+      </div>
+      <br class="clearboth">
+    </div>
+  </body>
+</html>

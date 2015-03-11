@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>oef3</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='../../css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <script src="../getobj.js"></script>
+    <style>
+      .clearboth {
+        clear: both;
+      }
+      h1 {
+        margin: 0 auto;
+        border: solid 1px;
+        background: #F1F1F1;
+        width: 400px;
+        padding: 5px;
+      }
+      
+      select {
+        width: 150px;
+        color: navy;
+        background: #F1F1F1;
+        text-align: left;
+      }
+      
+      input {
+        width: 50px;
+        color: #909;
+        background-color: #F1F1F1;
+        text-align: right;
+      }
+      
+      #IDbtn {
+        margin: 0 auto;
+        cursor: pointer;
+        width: 150px;
+        border: 5px outset #B5B5B5;
+        text-align: center;
+        background: #F1F1F1;
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 12px;
+      }
+      
+      #IDresul {
+        border: dashed 2px;
+        width: 480px;
+        height: 200px;
+        color: brown;
+        background-color: #cfc;
+        padding: 10px;
+        margin: 0 auto;
+      }
+      #IDresul img {
+        float: left;
+      }
+      
+      span {
+        width: 90px;
+        display: inline-block;
+        text-align: left;
+      }
+      
+    </style>
+    <script>
+      var keuze,waarde,waarde2,val,val2,btn,resul;
+      
+      function initieer() {
+        keuze = new getObj("IDkeuze");
+        waarde = new getObj("IDwaarde");
+        waarde2 = new getObj("IDwaarde2");
+        val = new getObj("IDval");
+        val2 = new getObj("IDval2");
+        resul = new getObj("IDresul");
+        btn = new getObj("IDbtn");
+        
+        keuze.obj.onchange = toonVelden;
+        btn.obj.onclick = maakBerekening;
+        
+        toonVelden();
+      }
+      
+      function toonVelden() {
+        var figuur = keuze.obj.options[keuze.obj.selectedIndex].value
+        switch (figuur) {
+            case "V" : waarde.obj.innerHTML = "zijde";
+                       waarde2.obj.innerHTML = "";
+                       val2.style.visibility = "hidden";
+                       break;
+            case "R" : waarde.obj.innerHTML = "lengte";
+                       waarde2.obj.innerHTML = "breedte";
+                       val2.style.visibility = "visible";
+                       break;
+            case "C" : waarde.obj.innerHTML = "straal";
+                       waarde2.obj.innerHTML = "";
+                       val2.style.visibility = "hidden";
+                       break;
+        }
+        val.obj.value = "";
+        val2.obj.value = "";
+        resul.style.visibility = "hidden";
+        
+        val.obj.focus();
+      }
+      
+      function maakBerekening() {
+        var figuur = keuze.obj.options[keuze.obj.selectedIndex].value;
+        var omtr;
+        var oppv;
+        var image;
+        switch (figuur) {
+          case "V" : omtr = Math.round((val.obj.value * val.obj.value)*100)/100;
+                     oppv = Math.round((val.obj.value * 4));
+                     image = "vierkant"
+                     break;
+          case "R" : omtr = Math.round((val.obj.value * val2.obj.value)*100)/100;
+                     oppv = Math.round((val.obj.value * 2 + val2.obj.value * 2)*100)/100;
+                     image = "rechthoek"
+                     break;
+          case "C" : omtr = Math.round((val.obj.value * val.obj.value * Math.PI)*100)/100;
+                     oppv = Math.round((val.obj.value * 2 * Math.PI)*100)/100;
+                     image = "vierkant"
+                     break;
+            
+        }
+          var strRes = '<h3>Berekening</h3>';
+          strRes += '<img src="../../img_oef7.taak4/' + image + '.gif">';
+          strRes += 'Omtrek : <b>' + omtr + '</b>'; 
+          strRes += '<br>Oppervlakte <b>' + oppv + '</b>'; 
+          resul.obj.innerHTML = strRes;
+          resul.style.visibility = "visible";  
+      }
+      
+    </script>
+  </head>
+  <body onload="initieer()">
+    <div class="container">
+      <h1>Figuren</h1>
+      <h2>Kies een figuur</h2>
+      <select id="IDkeuze" size="3" multiple>
+        <option value="V" selected>Vierkant</option>
+        <option value="R">Rechthoek</option>
+        <option value="C">Cirkel</option>
+      </select>
+      <p>
+      <span id="IDwaarde"></span>
+      <input type="text" id="IDval">
+      </p>
+      <p>
+      <span id="IDwaarde2"></span>
+      <input type="text" id="IDval2">
+      </p>  
+      <div id="IDbtn">
+        Bereken
+      </div>
+      <div id="IDresul">
+      <br class="clearboth">  
+      </div>
+      
+    </div>
+  </body>
+</html>

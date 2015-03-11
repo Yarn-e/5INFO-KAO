@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>7.58</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <style>
+      table {
+        margin: 0 auto;
+      }
+      table, td, tr {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <script>
+        //Var
+        var zone;
+        var toegsnelheid;
+        var flitssnelheid;
+        var boete = 0;
+        var km;
+        var stat = new Array();
+          for (i = 0;i < 5;i++) {
+          stat [i] = 0
+        }
+        var totbek = 0;
+        var totbed = 0;
+        var maxsnelheid = 0;
+        var boetemax = new Array();
+        boetemax[1] = 30;
+        boetemax[2] = 40;
+        var bijkm = new Array();
+        bijkm[1] = 10;
+        bijkm[2] = 5;
+        var stdboete = 50;
+        var doorgaan;
+        document.write('<h1>Boetberekeningprogramma</h1>')
+        zone = parseInt(prompt('Geef de zone in :\n1 : zone30\n2 : anders',''));
+        if (zone == 1) {
+          toegsnelheid = 30;
+          document.write('<h2>zone : Zone 30</h2>');
+        } else {
+          toegsnelheid = parseInt(prompt('Geef de toegelaten snelheid in.',''));
+          document.write('<h2>zone : Anders</h2>');
+        }
+        doorgaan = true
+        
+        while (doorgaan) {
+          flitssnelheid = parseInt(prompt('Geef de gemeten flitssnelheid in',''));
+          if (flitssnelheid == 0) {
+            doorgaan = false;
+          } else {
+              if (flitssnelheid > maxsnelheid) {
+                maxsnelheid = flitssnelheid;
+              }
+            totbek++;
+            km = flitssnelheid - toegsnelheid;
+            document.write('<br>Gemeten flitssnelheid : ' + flitssnelheid);
+            document.write('<br>Overtreden snelheid : ' + km);
+              if (km <= 10) {
+                boete = stdboete;
+                stat[0]++;
+              } else if (km <= boetemax[zone]) {
+                boete = stdboete + ((km - 10) * bijkm[zone]);
+                  if (boete <= 100) {
+                    stat[1]++;
+                  } else if (boete <= 250) {
+                    stat[2]++;
+                  } else {
+                    stat[3]++;
+                  }
+              } else {
+                stat[4]++;
+                boete = -1;
+              }
+              if (boete == -1) {
+                document.write('<br>rechtbank');
+              } else {
+                document.write('<br>Te betalen boete : ' + boete);
+                totbed+= boete;
+              }
+            document.write('<hr>')
+          }
+        }
+        document.write('<h2>STATISTIEK</h2>');
+        document.write('<table><tr><td>');
+        for (var t = 0;t < 4;t++) {
+          switch (t) {
+              case 0 : document.write('50 &euro;</td><td>')
+                      for (var i = 0;i < stat[t];i++) {
+                        document.write('x')
+                      }
+                      document.write(' ('+ stat[t] + ')</td></tr>')
+              break;
+              
+              case 1 : document.write('<tr><td>tss 50 en 100 &euro;</td><td>')
+                      for (var i = 0;i < stat[t];i++) {
+                        document.write('x')
+                      }
+                      document.write(' ('+ stat[t] + ')</td></tr>')
+              break;
+              
+              case 2 : document.write('<tr><td>tss 100 en 250 &euro;</td><td>')
+                      for (var i = 0;i < stat[t];i++) {
+                        document.write('x')
+                      }
+                      document.write(' ('+ stat[t] + ')</td></tr>')
+              break;
+              
+              case 3 : document.write('<tr><td>meer dan 250 &euro;</td><td>')
+                      for (var i = 0;i < stat[t];i++) {
+                        document.write('x')
+                      }
+                      document.write(' ('+ stat[t] + ')</td></tr>')
+              break;
+              
+              case 4 : document.write('<tr><td>Rechtbank</td><td>')
+                      for (var i = 0;i < stat[t];i++) {
+                        document.write('x')
+                      }
+                      document.write(' ('+ stat[t] + ')</td></tr>')
+              break;
+          }
+          
+        }
+        document.write('<br>Totaal aantal bekeuringen :' + totbek);
+        document.write('<br>Totaal te innen bedrag :' + totbed);
+        document.write('<br>Maximale gemeten snelheid :' + maxsnelheid);
+                        
+      </script>
+      </form>
+    </div>
+  </body>
+</html>

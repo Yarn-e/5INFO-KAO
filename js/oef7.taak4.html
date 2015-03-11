@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Taak 4</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <style>
+      .container {
+        text-align: left;
+      }
+      .container img {
+        float: left
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <script>
+        //Var
+        function cirkel(s,w) {
+          if (w == 1) {
+           var uitkomst = s * s * Math.PI;
+          } else {
+            uitkomst = s * 2 * Math.PI;
+          }
+          return afronden(uitkomst,3);
+        }
+        
+        function vierkant(z,w) {
+          if (w == 1) {
+            var uitkomst = z * z;
+          } else {
+            uitkomst = z * 4;
+          }
+          return afronden(uitkomst,2);
+        }
+        
+        function rechthoek(l,b,w) {
+          if (w == 1) {
+            var uitkomst = l * b;
+          } else {
+            uitkomst = l * 2 + b * 2;
+          }
+          return afronden(uitkomst,2);
+        }
+        
+        function afronden(cijfer, tot) {
+          var afrond = Math.pow(10,tot);
+          return(Math.round(afrond * cijfer) / afrond);
+        }
+        
+        var doorgaan = true;
+        document.write('Berekenen Figuren<hr>');
+        
+        while(doorgaan) {
+          var figuur = prompt('c= cirkel \nv= vierkant\nr= rechthoek \ns = stop','');
+          switch (figuur.toUpperCase()) {  
+          case "C" : 
+            var straal = parseFloat(prompt('Geef de straal in',''));
+            document.write('<img src="img_oef7.taak4/cirkel.gif">Cirkel <ul><li>straal = ' + straal + '</li>');
+            var opp = cirkel(straal,1)
+            var omtr = cirkel(straal,2)
+          break;
+            
+          case "V" :
+            var zijde = parseFloat(prompt('Geef de zijde in',''));
+            document.write('<img src="img_oef7.taak4/vierkant.gif">Vierkant <ul><li>zijde = ' + zijde + '</li>');
+            opp = vierkant(zijde,1)
+            omtr = vierkant(zijde,2)
+          break;
+          
+          case "R" :
+            var breedte = parseFloat(prompt('Geef de breedte in','')); 
+            var lengte = parseFloat(prompt('Geef de lengte in','')); 
+            document.write('<img src="img_oef7.taak4/rechthoek.gif">Rechthoek <ul><li>lengte = ' + lengte + '</li>');
+            opp = rechthoek(lengte,breedte,1);  
+            omtr = rechthoek(lengte,breedte,2);  
+          break;
+          
+          case "S" :
+            doorgaan = false;
+          break;
+              
+          default :
+            doorgaan = false;  
+          break;
+              
+          }
+          if (doorgaan) {
+            document.write('<li>Oppervlakte = ' + opp + '</li>')
+            document.write('<li>Omtrek = ' + omtr + '</li></ul><hr>')
+          }
+        }
+                        
+      </script>
+      </form>
+    </div>
+  </body>
+</html>

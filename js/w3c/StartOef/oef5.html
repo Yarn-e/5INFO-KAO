@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>oef3</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='../../css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <script src="../getobj.js"></script>
+    <style>
+      .clearboth {
+        clear: both;
+      }
+      h1 {
+        margin: 0 auto;
+        border: solid 1px;
+        background: #F1F1F1;
+        width: 400px;
+        padding: 5px;
+      }
+      
+      select {
+        width: 350px;
+        color: navy;
+        background: #F1F1F1;
+        text-align: left;
+      }
+      
+      input {
+        width: 50px;
+        color: #909;
+        background-color: #F1F1F1;
+        text-align: right;
+      }
+      
+      #IDbtn {
+        margin: 0 auto;
+        cursor: pointer;
+        width: 150px;
+        border: 5px outset #B5B5B5;
+        text-align: center;
+        background: #F1F1F1;
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 12px;
+      }
+      
+      #IDresul {
+        border: dashed 2px;
+        width: 480px;
+        height: 150px;
+        color: brown;
+        background-color: #cfc;
+        padding: 10px;
+        margin: 10px;
+        float: right;
+      }
+      #IDStat {
+        text-align: left;
+        float: right;
+        padding: 20px;
+      }
+      #IDStat h2 {
+        text-align: center;
+      }
+      table {
+        margin: 0 auto;
+      }
+      #Keuzes {
+        margin: 0 auto;
+        width: 400px;
+        text-align: left;
+      }
+      span {
+        width: 110px;
+        display: inline-block;
+        text-align: left;
+      }
+      
+    </style>
+    <script>
+      var keuze,Max,Flits,Maxval,Flitsval,btn,stat,resul
+      
+        var toegsnelheid;
+        var flitssnelheid;
+        var boete = 0;
+        var km;
+        var stat = new Array();
+          for (i = 0;i < 5;i++) {
+          stat [i] = 0
+        }
+        var totbek = 0;
+        var totbed = 0;
+        var maxsnelheid = 0;
+        var boetemax = new Array();
+        boetemax[0] = 30;
+        boetemax[1] = 40;
+        var bijkm = new Array();
+        bijkm[0] = 10;
+        bijkm[1] = 5;
+        var stdboete = 50;
+        
+      function initieer() {
+        keuze = new getObj('IDkeuze');
+        Max = new getObj('IDMax');
+        Flits = new getObj('IDFlits');
+        Maxval= new getObj('IDMaxVal');
+        Flitsval = new getObj('IDFlitsVal');
+        resul = new getObj('IDresul');
+        statz = new getObj('IDStat');
+        btn = new getObj('IDbtn');
+        statz.style.visibility = 'hidden';
+        resul.style.visibility = 'hidden';
+        keuze.obj.onchange = toonVelden;
+        btn.obj.onclick = maakBerekening;
+        
+        toonVelden();
+      }
+      
+      function toonVelden() {
+        var zone = keuze.obj.options[keuze.obj.selectedIndex].value
+        switch (zone) {
+            case "0" : Max.obj.innerHTML = '';
+                     Flits.obj.innerHTML = 'Flitssnelheid :';
+                     Maxval.style.visibility = 'hidden';
+                     break;
+            case "1" : Max.obj.innerHTML = 'Max snelheid :';
+                     Flits.obj.innerHTML = 'Flitssnelheid :';
+                     Maxval.style.visibility = 'visible';
+                     break;
+        }
+        Maxval.obj.value = "";
+        Flitsval.obj.value = "";
+        
+        
+      }
+      
+      function maakBerekening() {
+        var zone = parseInt(keuze.obj.options[keuze.obj.selectedIndex].value)
+        var StrRes = '<h2>Boete Berekenening</h1>';
+        var StrStat = '<h2>STATISTIEK</h2>';
+        
+        if (zone == 0) {
+          toegsnelheid = 30;
+          StrRes += 'De zone waarin u geflist werd was :<b> Zone 30</b>';
+        } else {
+          toegsnelheid = Maxval.obj.value;
+          StrRes += 'De zone waarin u geflist werd was :<b> Andere zone</b>';
+        }
+        flitssnelheid = Flitsval.obj.value;
+        
+        if (flitssnelheid > maxsnelheid) {
+          maxsnelheid = flitssnelheid;
+        }
+        
+        totbek++;
+        km = flitssnelheid - toegsnelheid;
+        StrRes += '<br> U reed <b>' + km + ' km/u</b> teveel';  
+        
+        if (km <= 10) {
+          boete = stdboete;
+          stat[0]++;
+        } else if (km <= boetemax[zone]) {
+          boete = stdboete + ((km - 10) * bijkm[zone]);
+            if (boete <= 100) {
+              stat[1]++;
+            } else if (boete <= 250) {
+              stat[2]++;
+            } else {
+              stat[3]++;
+            }
+        } else {
+          stat[4]++;
+          boete = -1;
+        }
+        
+        if (boete == -1) {
+          StrRes += '<br>Naar de rechtbank';
+        } else {
+          StrRes += '<br>Te betalen boete : <b>' + boete + ' euro</b>';
+          totbed += boete;
+        }
+        
+        StrStat += '<table><tr><td>';
+        for (var t = 0;t < 4;t++) {
+          switch (t) {
+            case 0 : StrStat += '50 &euro;</td><td>';
+                    for (var i = 0;i < stat[t];i++) {
+                      StrStat += 'x'; 
+                    }
+                    StrStat += ' ('+ stat[t] + ')</td></tr>';
+            break;
+
+            case 1 : StrStat += '<tr><td>tss 50 en 100 &euro;</td><td>'; 
+                    for (var i = 0;i < stat[t];i++) {
+                      StrStat +='x';
+                    }
+                    StrStat += ' ('+ stat[t] + ')</td></tr>';
+            break;
+
+            case 2 : StrStat += '<tr><td>tss 100 en 250 &euro;</td><td>';
+                    for (var i = 0;i < stat[t];i++) {
+                      StrStat += 'x';
+                    }
+                    StrStat += ' ('+ stat[t] + ')</td></tr>';
+            break;
+
+            case 3 : StrStat += '<tr><td>meer dan 250 &euro;</td><td>';
+                    for (var i = 0;i < stat[t];i++) {
+                      StrStat += 'x';
+                    }
+                    StrStat += ' ('+ stat[t] + ')</td></tr>';
+            break;
+
+            case 4 : StrStat += '<tr><td>Rechtbank</td><td>';
+                    for (var i = 0;i < stat[t];i++) {
+                      StrStat += 'x';
+                    }
+                    StrStat += ' ('+ stat[t] + ')</td></tr>';
+            break;
+          }
+        }
+        StrStat += '<br>Totaal aantal bekeuringen :' + totbek;
+        StrStat += '<br>Totaal te innen bedrag :' + totbed;
+        StrStat += '<br>Maximale gemeten snelheid :' + maxsnelheid;
+        
+        statz.obj.innerHTML = StrStat;
+        statz.style.visibility = "visible";
+        resul.obj.innerHTML = StrRes;
+        resul.style.visibility = "visible";
+      }
+      
+    </script>
+  </head>
+  <body onload="initieer()">
+    <div class="container">
+      <h1>FlitsBoeteBerekenaar</h1>
+      <div id="IDStat">
+      <br class="clearboth">  
+      </div>
+      <div id="Keuzes">
+        Kies een zone : <br>
+        <select id="IDkeuze" size="2" multiple>
+          <option value="0">Zone 30, (woonerf), schoolomgeving, bebouwde kom</option>
+          <option value="1" selected>andere zone</option>
+        </select>
+        <p>
+        <span id="IDMax"></span>
+        <input type="text" id="IDMaxVal">
+        </p>
+        <p>
+        <span id="IDFlits"></span>
+        <input type="text" id="IDFlitsVal">
+        </p>  
+        <div id="IDbtn">
+          Bereken Boete
+        </div>
+      </div>  
+      <div id="IDresul">
+      <br class="clearboth">  
+      </div>
+      <br class="clearboth">  
+    </div>
+  </body>
+</html>

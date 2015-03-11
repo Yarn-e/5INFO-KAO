@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>7.54</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='css/jsstyle.css' rel='stylesheet' type='text/css'>
+        <style>   
+      .left {
+        float: left
+      }
+      .clearboth {
+        clear: both;
+      }    
+      #jnaam , #gnaam {
+        width: 120px;
+      }
+      #output {
+        width: 50px;
+      }    
+    </style>
+    <script>
+      function ber() {
+        var jnaam = formul.jnaam.value;
+        var gnaam = formul.gnaam.value;
+        var lengte1 = 0;
+        var lengte2 = 0;
+        var LoveTeller = 0;
+        var LoveLengte = 0;
+        var score = 0;
+        
+        if (jnaam == 0 || gnaam == 0) {
+          alert('Gelieve alles in te vullen.')
+        } else {
+          jnaam = jnaam.toUpperCase();
+          gnaam = gnaam.toUpperCase();
+          lengte1 = jnaam.length;
+          lengte2 = gnaam.length;
+          LoveTeller = punt(jnaam, lengte1);
+          LoveTeller += punt(gnaam, lengte2);
+          LoveLengte = (lengte1 + lengte2) / 2;
+          
+          if (LoveTeller > 22){
+          score = 110 - LoveLengte
+        } else if (LoveTeller > 20){
+          score = 100 - LoveLengte
+        } else if (LoveTeller > 18){
+          score = 90 - LoveLengte
+        } else if (LoveTeller > 16){
+          score = 80 - LoveLengte
+        } else if (LoveTeller > 14){
+          score = 70 - LoveLengte
+        } else if (LoveTeller > 12){
+          score = 60 - LoveLengte
+        } else if (LoveTeller > 10){
+          score = 50 - LoveLengte
+        } else if (LoveTeller > 8){
+          score = 40 - LoveLengte
+        } else if (LoveTeller > 4){
+          score = 20 - LoveLengte
+        } else if (LoveTeller > 2){
+          score = 10 - LoveLengte
+        } else if (LoveTeller > 0){
+          score = 5 - LoveLengte
+        } else {
+          score = 0
+        }
+        if (score >= 99) {
+          score = 99
+        }  
+        formul.output.value = score + "%"
+        
+        }
+      }
+      
+      function punt(naam,lengte) {
+        var punten = 0;
+        for (var i = 0;i <= lengte;i++) {
+          var letter = naam.substr(i, 1);
+          switch (letter) {
+            case 'L' : 
+              punten += 2;
+              break;
+            case 'O' :
+              punten += 3;
+              break;
+            case 'V' :
+              punten += 2;
+              break;
+            case 'E' :
+              punten += 2;
+              break;
+            case 'Y' :
+              punten += 3;
+              break;
+            case 'O' :
+              punten += 1;
+              break;
+            case 'U' :
+              punten += 3;
+              break;
+          }
+        }
+        return punten;
+      } 
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="formul">
+        <img src="img_oef7.54/love_calculator.jpg" alt="" class="left">
+        <div class="right">
+          <br>
+          <input type="text" id="jnaam" placeholder="Jouw naam" autofocus> + 
+          <input type="text" id="gnaam" placeholder="Naam geliefde"> = 
+          <input type="text" id="output" readonly>
+          <br>
+          <br>
+          <input type="button" value="Berekenen!" onClick="ber()">
+          </div>
+          <br class="clearboth">
+      </form>
+    </div>
+  </body>
+</html>

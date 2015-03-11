@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>oef3</title>
+    <meta name="description" content="Decuyper Yarne">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='../../css/jsstyle.css' rel='stylesheet' type='text/css'>
+    <script src="../getobj.js"></script>
+    <style>
+      #IDbtn {
+        margin: 0 auto;
+        cursor: pointer;
+        width: 150px;
+        border: 5px outset #B5B5B5;
+        text-align: center;
+        background: #F1F1F1;
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 12px;
+      }
+      select {
+        width: 60px;
+        margin: 10px 20px;;
+      }
+      #IDMaand {
+        width: 100px;
+      }
+    </style>
+    <script>
+      var Dag, Maand, Jaar, Btn, Horo, ChHoro;
+      var Nu = new Date();
+      
+      function initieer() {
+        
+        Dag = new getObj('IDDag');
+        Maand = new getObj('IDMaand');
+        Jaar = new getObj('IDJaar');
+        Btn = new getObj('IDbtn');
+        Horo = new getObj('IDHoro');
+        ChHoro = new getObj('IDChHoro');
+        VulJaar();
+        VulMaand();
+        VulDag();
+        Maand.obj.onchange = VulDag; 
+        Jaar.obj.onchange = VulDag; 
+      }
+      
+      function VulJaar() {
+        
+        var nujaar = Nu.getFullYear();
+        for (var i = 0;i <= 100;i++) {
+          var Jaarz = nujaar - i;
+          if (Jaarz == nujaar) {
+            Jaar.obj.innerHTML += '<option value="'+ Jaarz +'" selected>'+ Jaarz +'</option>';
+          } else {
+            Jaar.obj.innerHTML += '<option value="'+ Jaarz +'">'+ Jaarz +'</option>';
+          }
+        }
+      }
+      
+      function VulMaand() {
+        
+        var maandary = new Array('Januari','Februari','Maart','April','Mei','Juni','Juli','Augustus','September','Oktober','November','December');
+        var nuMaand = Nu.getMonth();
+        for (var i = 0;i <= 11;i++) {
+          if (i == nuMaand) {
+            Maand.obj.innerHTML += '<option value="'+ i +'" selected>'+ maandary[i] +'</option>';
+          } else {
+            Maand.obj.innerHTML += '<option value="'+ i +'">'+ maandary[i] +'</option>';
+          }
+        }
+      }
+      
+      function VulDag() {
+        Dag.obj.innerHTML = '';
+        var nuDag = Nu.getDate();
+        var maandkeuze = parseInt(Maand.obj.options[Maand.obj.selectedIndex].value);
+        var Jaarkeuze = parseInt(Jaar.obj.options[Jaar.obj.selectedIndex].value);
+        var loopend;
+        switch(maandkeuze) {
+          case 0 : 
+          case 2 : 
+          case 4 : 
+          case 6 : 
+          case 8 : 
+          case 10 :
+            loopend = 31;
+          break;
+            
+          case 3 : 
+          case 5 : 
+          case 7 : 
+          case 8 : 
+          case 9 : 
+          case 11 :
+            loopend = 30;
+          break;
+            
+          case 1 :
+            loopend = Feb(Jaarkeuze);
+            
+          break;
+        }
+        for (var i = 1;i <= loopend;i++) {
+          if (i == nuDag) {
+            Dag.obj.innerHTML += '<option value="'+ i +'" selected>'+ i +'</option>';
+          } else {
+            Dag.obj.innerHTML += '<option value="'+ i +'">'+ i +'</option>';
+          }
+        }
+      }
+      function Feb(jaar) {
+        
+        if ((jaar % 4) == 0) {
+          return 29;
+        }
+        return 28;
+      }
+      
+    </script>
+  </head>
+  <body onload="initieer()">
+    <div class="container">
+      <h1>Horoscoop</h1>
+      
+      <div id="Keuzes">
+        Geef uw geboortejaar in : <br>
+        <select id="IDDag" size="1">
+        </select>
+        <select id="IDMaand" size="1">
+        </select>
+        <select id="IDJaar" size="1">
+        </select>  
+        <div id="IDbtn">
+          Berekenen
+        </div>
+      </div>  
+      <div id="IDHoro">
+      <br class="clearboth">  
+      </div>
+      <div id="IDChHoro">
+      <br class="clearboth">  
+      </div>
+      <br class="clearboth">  
+    </div>
+  </body>
+</html>
